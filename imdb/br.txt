@@ -51,3 +51,45 @@ for movies in driver.find_elements_by_tag_name("tr"):
 
 
 driver.close()
+
+
+----
+import time, requests
+from bs4 import BeautifulSoup
+
+request = requests.get('https://www.imdb.com/chart/top/?ref_=nv_mv_250')
+
+fieldnames = ['link', 'name', 'year', 'genre', 'rating', 'original name']
+rows = []
+
+liste_des_filmes = []
+
+for film in range(0, 2):
+    time.sleep(1)
+    dictionnaire = {}
+
+    soup = BeautifulSoup(request.text, 'lxml')
+    filmes = soup.find('tbody', {'class': 'lister-list'}).find_all('tr')[film]
+
+    link = 'https://www.imdb.com/' + filmes.find_all('td')[1].find('a').get('href')
+    year = filmes.find_all('td')[1].find('span').text.replace('(', '')
+    name = filmes.find_all('td')[1].find('a').text
+    score = filmes.find_all('td')[2].find('strong').text
+    rating = filmes.find_all('td')[2].find('strong').text
+
+    soup = BeautifulSoup(requests.get(link).text, 'lxml')
+
+
+    print(soup.find('h1', {'class': 'sc-b73cd867-0 eKrKux'}).text)
+    original_name = soup.find('div', {'class': 'sc-dae4a1bc-0 gwBsXc'}).text[16:]
+
+    dictionnaire['link'] = link
+    dictionnaire['name'] = name
+    dictionnaire['year'] = year.replace(')', '')
+    dictionnaire['rating'] = rating
+    dictionnaire['original name'] = original_name
+
+    rows.append(dictionnaire)
+
+print(rows)
+
