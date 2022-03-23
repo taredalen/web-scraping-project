@@ -1,4 +1,4 @@
-1647857865525	geckodriver	INFO	Listening on 127.0.0.1:57318
+ 1647857865525	geckodriver	INFO	Listening on 127.0.0.1:57318
 1647857868594	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57319" "-no-remote" "-profile" "C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofilehNTUJQ"
 1647857868888	Marionette	INFO	Marionette enabled
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofilehNTUJQ\\search.json.mozlz4", (void 0)))

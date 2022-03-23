@@ -1,24 +1,28 @@
-
+import time, requests
+from bs4 import BeautifulSoup
 from selenium import webdriver
-import time
-import movies_func
 
-driver = webdriver.Firefox()
-driver.get("https://www.imdb.com/search/title/?groups=top_250&sort=user_rating")
-#time.sleep(2)
+request = requests.get('https://www.imdb.com/chart/top/?ref_=nv_mv_250')
+soup = BeautifulSoup(request.text, 'lxml')
 
+fieldnames = ['name', 'year', 'genre', 'rating']
+rows = []
 
+liste_des_filmes = []
 
+for film in range(0, 1):
+    dictionnaire = {}
 
+    filmes = soup.find("tbody", {"class": "lister-list"}).find_all('tr')[film]
 
-for i in range(0,4):
-    movies = driver.find_elements_by_class_name("lister-item-header")
-    movies_func.get_movies(movies)
-    driver.find_element_by_class_name("next-page").click()
+    name = filmes.find_all('td')[1].find('a').text
+    year = filmes.find_all('td')[1].find('span').text.replace('(', '')
+    score = filmes.find_all('td')[2].find('strong').text
+    genre = filmes.find_all('td')[2].find('strong').text
+    rating = filmes.find_all('td')[2].find('strong').text
 
-
-
-driver.close()
-
+    dictionnaire['name'] = name
+    dictionnaire['year'] = year.replace(')', '')
+    rows.append(dictionnaire)
 
 
