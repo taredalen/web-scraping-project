@@ -4,20 +4,29 @@
   "name": "Les \u00c9vad\u00e9s",
   "year": "1994",
   "genre": "Drama",
-  "rating": "9.3"
+  "rating": "9.3",
+  "metascore": "81",
+  "user review": "https://www.imdb.com//title/tt0111161/reviews?ref_=tt_ov_rt",
+  "critic review": "https://www.imdb.com//title/tt0111161/externalreviews?ref_=tt_ov_rt"
  },
  "The Godfather": {
   "link": "https://www.imdb.com//title/tt0068646/",
   "name": "Le Parrain",
   "year": "1972",
   "genre": "Crime, Drama",
-  "rating": "9.2"
+  "rating": "9.2",
+  "metascore": "100",
+  "user review": "https://www.imdb.com//title/tt0068646/reviews?ref_=tt_ov_rt",
+  "critic review": "https://www.imdb.com//title/tt0068646/externalreviews?ref_=tt_ov_rt"
  },
  "The Dark Knight": {
   "link": "https://www.imdb.com//title/tt0468569/",
   "name": "The Dark Knight : Le Chevalier noir",
   "year": "2008",
   "genre": "Action, Crime, Drama",
-  "rating": "9.1"
+  "rating": "9.1",
+  "metascore": "84",
+  "user review": "https://www.imdb.com//title/tt0468569/reviews?ref_=tt_ov_rt",
+  "critic review": "https://www.imdb.com//title/tt0468569/externalreviews?ref_=tt_ov_rt"
  }
 }

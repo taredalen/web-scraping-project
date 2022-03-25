@@ -1,4 +1,3 @@
-import csv
 import json
 import time, requests
 from bs4 import BeautifulSoup
@@ -39,11 +38,16 @@ for film in range(0, 3):
     for genre in genres:
         liste_genres.append(genre.text)
 
+    metascore = soup.find('span', {'class': 'score-meta'}).text
+
     dictionnaire['link'] = link
     dictionnaire['name'] = name
     dictionnaire['year'] = year.replace(')', '')
     dictionnaire['genre'] = ', '.join(liste_genres)
     dictionnaire['rating'] = rating
+    dictionnaire['metascore'] = metascore
+    dictionnaire['user review'] = link + 'reviews?ref_=tt_ov_rt'
+    dictionnaire['critic review'] = link + 'externalreviews?ref_=tt_ov_rt'
 
     data[original_name] = dictionnaire
 
