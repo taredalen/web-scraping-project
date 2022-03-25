@@ -6,32 +6,37 @@ data = {}
 
 request = requests.get('https://www.imdb.com/chart/top/?ref_=nv_mv_250')
 
-for film in range(0, 3):
-    time.sleep(2)
+for film in range(0, 250):
+    time.sleep(0.8)
 
     dictionnaire = {}
     liste_genres = []
 
     soup = BeautifulSoup(request.text, 'lxml')
     filmes = soup.find('tbody', {'class': 'lister-list'}).find_all('tr')[film]
-    #name = filmes.find_all('td')[1].find('a').text
 
     link = 'https://www.imdb.com/' + filmes.find_all('td')[1].find('a').get('href')
 
-    time.sleep(1)
+    time.sleep(0.8)
 
     soup = BeautifulSoup(requests.get(link).text, 'lxml')
 
     name = soup.find('h1', {'data-testid': 'hero-title-block__title'}).text
     year = soup.find('span', {'class': 'sc-52284603-2 iTRONr'}).text
     rating = soup.find('span', {'class': 'sc-7ab21ed2-1 jGRxWM'}).text
-    metascore = soup.find('span', {'class': 'score-meta'}).text
+    metascore = soup.find('span', {'class': 'score-meta'})
     original_name = soup.find('div', {'class': 'sc-dae4a1bc-0 gwBsXc'})
+
+    if metascore is None:
+        metascore = ''
+    else:
+        metascore = metascore.text
 
     if original_name is None:
         original_name = name
     else:
         original_name = original_name.text[16:]
+
 
     genres = soup.find('div', {'data-testid': 'genres'}).find_all('span', {'class': 'ipc-chip__text'})
 
@@ -48,6 +53,8 @@ for film in range(0, 3):
     dictionnaire['critic review'] = link + 'externalreviews?ref_=tt_ov_rt'
 
     data[original_name] = dictionnaire
+    print(film)
+    print(name)
 
 with open('data.json', 'w') as outfile:
     json.dump(data, outfile, indent=1)

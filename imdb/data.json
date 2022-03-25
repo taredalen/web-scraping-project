@@ -1,32 +1,22 @@
 {
- "The Shawshank Redemption": {
-  "link": "https://www.imdb.com//title/tt0111161/",
-  "name": "Les \u00c9vad\u00e9s",
-  "year": "1994",
-  "genre": "Drama",
-  "rating": "9.3",
-  "metascore": "81",
-  "user review": "https://www.imdb.com//title/tt0111161/reviews?ref_=tt_ov_rt",
-  "critic review": "https://www.imdb.com//title/tt0111161/externalreviews?ref_=tt_ov_rt"
- },
- "The Godfather": {
-  "link": "https://www.imdb.com//title/tt0068646/",
-  "name": "Le Parrain",
-  "year": "1972",
-  "genre": "Crime",
-  "rating": "9.2",
-  "metascore": "100",
-  "user review": "https://www.imdb.com//title/tt0068646/reviews?ref_=tt_ov_rt",
-  "critic review": "https://www.imdb.com//title/tt0068646/externalreviews?ref_=tt_ov_rt"
- },
- "The Dark Knight": {
-  "link": "https://www.imdb.com//title/tt0468569/",
-  "name": "The Dark Knight : Le Chevalier noir",
-  "year": "2008",
-  "genre": "Action",
-  "rating": "9.1",
+ "Ah-ga-ssi": {
+  "link": "https://www.imdb.com//title/tt4016934/",
+  "name": "Mademoiselle",
+  "year": "2016",
+  "genre": "Drama, Romance, Thriller",
+  "rating": "8.1",
   "metascore": "84",
-  "user review": "https://www.imdb.com//title/tt0468569/reviews?ref_=tt_ov_rt",
-  "critic review": "https://www.imdb.com//title/tt0468569/externalreviews?ref_=tt_ov_rt"
+  "user review": "https://www.imdb.com//title/tt4016934/reviews?ref_=tt_ov_rt",
+  "critic review": "https://www.imdb.com//title/tt4016934/externalreviews?ref_=tt_ov_rt"
+ },
+ "Dances with Wolves": {
+  "link": "https://www.imdb.com//title/tt0099348/",
+  "name": "Danse avec les loups",
+  "year": "1990",
+  "genre": "Adventure, Drama, Western",
+  "rating": "8.1",
+  "metascore": "72",
+  "user review": "https://www.imdb.com//title/tt0099348/reviews?ref_=tt_ov_rt",
+  "critic review": "https://www.imdb.com//title/tt0099348/externalreviews?ref_=tt_ov_rt"
  }
 }
