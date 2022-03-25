@@ -322,3 +322,54 @@ DevTools listening on ws://localhost:49848/devtools/browser/52907c4b-b8c4-490f-8
 
 ###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
 
+1648082056117	Marionette	INFO	Stopped listening on port 49855
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1648082056705	Marionette	INFO	Stopped listening on port 49707
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1648199654892	geckodriver	INFO	Listening on 127.0.0.1:49242
+1648199655399	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "49243" "-foreground" "-no-remote" "-profile" "/var/folders/r3/fwypq2mn4f14x5qy_zqr6g340000gn/T/rust_mozprofileRDu9vS"
+DevTools listening on ws://localhost:49243/devtools/browser/8b0f1ac5-0ece-4d34-b6aa-8f6a944dc3e3
+1648199764559	geckodriver	INFO	Listening on 127.0.0.1:49333
+1648199765075	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "49334" "-foreground" "-no-remote" "-profile" "/var/folders/r3/fwypq2mn4f14x5qy_zqr6g340000gn/T/rust_mozprofileqfyZmC"
+1648199765628	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/r3/fwypq2mn4f14x5qy_zqr6g340000gn/T/rust_mozprofileqfyZmC/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:49334/devtools/browser/e871693b-71f4-420c-8cb2-b599f45d7e91
+1648199767940	Marionette	INFO	Listening on port 49341
+1648199767992	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2022-03-25 10:18:33.839 firefox-bin[1215:25403] TSM AdjustCapsLockLEDForKeyTransitionHandling - _ISSetPhysicalKeyboardCapsLockLED Inhibit
+2022-03-25 10:22:29.166 firefox-bin[1190:24184] TSM AdjustCapsLockLEDForKeyTransitionHandling - _ISSetPhysicalKeyboardCapsLockLED Inhibit
+2022-03-25 10:22:53.147 plugin-container[1293:28651] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-03-25 10:22:53.148 plugin-container[1293:28651] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-03-25 10:22:53.254 plugin-container[1293:28651] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-03-25 10:22:53.254 plugin-container[1293:28651] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-03-25 10:22:53.255 plugin-container[1293:28666] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-03-25 10:22:53.255 plugin-container[1293:28666] nil host used in call to allowsAnyHTTPSCertificateForHost:
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DiscardWindowContext) Channel closing: too late to send/recv, messages will be lost
+

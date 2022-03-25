@@ -1,0 +1,23 @@
+{
+ "The Shawshank Redemption": {
+  "link": "https://www.imdb.com//title/tt0111161/",
+  "name": "Les \u00c9vad\u00e9s",
+  "year": "1994",
+  "genre": "Drama",
+  "rating": "9.3"
+ },
+ "The Godfather": {
+  "link": "https://www.imdb.com//title/tt0068646/",
+  "name": "Le Parrain",
+  "year": "1972",
+  "genre": "Crime, Drama",
+  "rating": "9.2"
+ },
+ "The Dark Knight": {
+  "link": "https://www.imdb.com//title/tt0468569/",
+  "name": "The Dark Knight : Le Chevalier noir",
+  "year": "2008",
+  "genre": "Action, Crime, Drama",
+  "rating": "9.1"
+ }
+}
