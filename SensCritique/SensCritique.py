@@ -1,0 +1,75 @@
+
+from tokenize import Ignore
+from webbrowser import get
+from selenium import webdriver
+import pandas as pd
+import selenium
+from selenium.webdriver.common.by import By
+import time
+import json
+
+driver = webdriver.Firefox()
+
+Liste_note = []
+liste_film =[]
+Liste_film_traite = []
+Liste_commentaire = []
+Liste_commentaire_titre = []
+Liste_complete = {}
+dictionnaire = {}
+Liste_film_to_search = []
+
+driver.get("https://www.senscritique.com/")
+time.sleep(5)
+#driver.find_element(by= By.CLASS_NAME, value="fc-button-label").click()
+#driver.find_element_by_class_name("fc-button-label").click()
+driver.find_element(By.CLASS_NAME,"fc-button-label").click()
+time.sleep(5)
+driver.find_element(By.CLASS_NAME,'header-navigation-main-item').click()
+time.sleep(5)
+driver.find_element(By.LINK_TEXT,'TOPS').click()
+time.sleep(5)
+driver.find_element(By.CLASS_NAME,'epca-title').click()
+time.sleep(5)
+
+#Todo: les pubs surprises à prévoir/anticiper
+
+liste_film.append(driver.find_elements(By.CLASS_NAME,'elco-title'))
+for element in range(100):
+    Liste_film_traite.append(liste_film[0][element].text)
+
+
+
+
+def getCommentaire(films_select):
+    driver.find_elements()
+    Liste_commentaire_titre.append(driver.find_elements(By.CLASS_NAME,'ere-review-heading').text)
+    Liste_commentaire.append(driver.find_elements(By.CLASS_NAME,'ere-review-excerpt').text)
+
+
+def merge_comms(liste_comm,liste_titre):
+    Frame_commentaire = pd.DataFrame({"titre":liste_titre,"commentaire":liste_comm})
+    Frame_commentaire.to_csv('SensCritique.csv',sep = ";")
+
+Data_imdb = pd.read_json('C:/Users/victo/Desktop/Codes/VS_WorkSpace/WebScrapingProject/imdb/data.json')
+
+
+for title in Data_imdb.keys():
+    Liste_film_to_search.append(title)
+
+
+
+
+
+
+
+
+
+
+
+#dictionnaire['commentaire'] = Liste_commentaire
+#dictionnaire['titre_commentaire'] = Liste_commentaire_titre
+#Liste_complete[Liste_film_traite] = dictionnaire
+
+#with open('data_Senscritique.json','w') as outfile:
+#    json.dump(dictionnaire, outfile, indent = 1)

@@ -1,0 +1,40 @@
+1648228297174	geckodriver	INFO	Listening on 127.0.0.1:62321
+1648228300264	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62322" "-no-remote" "-profile" "C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofilePGSjaA"
+1648228300500	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofilePGSjaA\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62322/devtools/browser/5bb995d4-6b3c-46b0-bbe9-06cae1b6feab
+1648228302113	Marionette	INFO	Listening on port 62327
+1648228302299	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1648228318282	Marionette	INFO	Stopped listening on port 62327
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1648228463852	geckodriver	INFO	Listening on 127.0.0.1:62380
+1648228466937	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62381" "-no-remote" "-profile" "C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofileAjpAti"
+1648228467187	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofileAjpAti\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62381/devtools/browser/754f9943-4cf6-47a1-b129-df3d8cd05fc3
+1648228468850	Marionette	INFO	Listening on port 62386
+1648228468979	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1648228473708	Marionette	INFO	Stopped listening on port 62386
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1648228905203	geckodriver	INFO	Listening on 127.0.0.1:50947
+1648228908267	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50948" "-no-remote" "-profile" "C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofileLqYZSc"
+1648228908503	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofileLqYZSc\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50948/devtools/browser/6119a805-9260-413e-b22c-2b91b60e6ac1
+1648228910192	Marionette	INFO	Listening on port 50953
+1648228910313	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 2715 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 3330 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 46 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 2876 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 16588, MediaDecoderStateMachine #1] WARNING: 2879a6db040 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:330
+1648228942254	Marionette	INFO	Stopped listening on port 50953
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
