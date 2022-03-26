@@ -53,7 +53,6 @@ def merge_comms(liste_comm,liste_titre):
 
 Data_imdb = pd.read_json('C:/Users/victo/Desktop/Codes/VS_WorkSpace/WebScrapingProject/imdb/data.json')
 
-
 for title in Data_imdb.keys():
     Liste_film_to_search.append(title)
 
