@@ -11,9 +11,7 @@ import json
 
 from SCget_review import getCommentaire
 from SCget_review import merge_comms
-from WebScrapingProject.SensCritique.SCget_review import recherche
-
-
+from SCget_review import recherche
 
 
 driver = webdriver.Firefox()
@@ -27,8 +25,6 @@ Liste_film_to_search = []
 
 driver.get("https://www.senscritique.com/")
 time.sleep(5)
-#driver.find_element(by= By.CLASS_NAME, value="fc-button-label").click()
-#driver.find_element_by_class_name("fc-button-label").click()
 driver.find_element(By.CLASS_NAME,"fc-button-label").click()
 time.sleep(5)
 driver.find_element(By.CLASS_NAME,'header-navigation-main-item').click()
@@ -53,8 +49,6 @@ Data_imdb = pd.read_json('C:/Users/victo/Desktop/Codes/VS_WorkSpace/WebScrapingP
 for titre in Liste_film_traite:
     recherche(titre)
     
-
-
 
 for title in Data_imdb.keys():
     Liste_film_to_search.append(title)
