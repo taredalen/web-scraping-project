@@ -47,11 +47,9 @@ Data_imdb = pd.read_json('./imdb/data.json')
 
 
 for titre in Liste_film_traite:
-    recherche(titre)
+    recherche(titre,driver)
     
 
-for title in Data_imdb.keys():
-    Liste_film_to_search.append(title)
 
 
 #dictionnaire['commentaire'] = Liste_commentaire
@@ -60,3 +58,5 @@ for title in Data_imdb.keys():
 
 #with open('data_Senscritique.json','w') as outfile:
 #    json.dump(dictionnaire, outfile, indent = 1)
+
+driver.close()
