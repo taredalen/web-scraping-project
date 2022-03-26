@@ -1,16 +1,13 @@
-import re
+from bs4 import BeautifulSoup
+import requests
 import json
 import time
+import re
 
-import requests
-from bs4 import BeautifulSoup
-
-from imdb.get_reviews import get_reviews
-from imdb.user_reviews import get_user_reviews
-
+from imdb.reviews import get_user_reviews,  get_critics_reviews
 
 start = time.time()
-print("starting")
+print('starting')
 
 film_rows = []
 
@@ -37,9 +34,8 @@ for film in range(0, 100):
     metascore = soup.find('span', {'class': 'score-meta'})
     original_name = soup.find('div', {'class': 'sc-dae4a1bc-0 gwBsXc'})
 
-
-    budget = soup.find('li', {'data-testid': 'title-boxoffice-budget'}).find('span', {'class': 'ipc-metadata-list-item__list-content-item'})
-    gross = soup.find('li', {'data-testid': 'title-boxoffice-cumulativeworldwidegross'}).find('span', {'class': 'ipc-metadata-list-item__list-content-item'})
+    budget = soup.find('section', {'cel_widget_id': 'StaticFeature_BoxOffice'}).find('span', {'class': 'ipc-metadata-list-item__list-content-item'})
+    gross = soup.find('section', {'cel_widget_id': 'StaticFeature_BoxOffice'}).find('span', {'class': 'ipc-metadata-list-item__list-content-item'})
 
     if budget is None or gross is None:
         income = ''
@@ -70,14 +66,14 @@ for film in range(0, 100):
 
     dictionary = {'link': link,
                   'year': year.text.replace(')', ''),
-                  'genre': ', '.join(list_genre),
+                  'genre': ' '.join(list_genre),
                   'rating': rating.text,
                   'income': income,
                   'metascore': metascore,
                   'user review url': user_review_url,
                   'critic review url': critic_review_url,
                   'users reviews': get_user_reviews(user_review_url),
-                  'critics reviews': get_reviews(critic_review_url)}
+                  'critics reviews': get_critics_reviews(critic_review_url)}
 
     film_data = {'title': original_name, 'results': [dictionary]}
 
