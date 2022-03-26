@@ -43,7 +43,7 @@ for element in range(100):
 
 
 
-Data_imdb = pd.read_json('C:/Users/victo/Desktop/Codes/VS_WorkSpace/WebScrapingProject/imdb/data.json')
+Data_imdb = pd.read_json('./imdb/data.json')
 
 
 for titre in Liste_film_traite:

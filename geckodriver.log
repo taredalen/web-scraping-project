@@ -37,3 +37,101 @@ JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZ
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
 console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
 [Parent 16132, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1648304346940	geckodriver	INFO	Listening on 127.0.0.1:58172
+1648304350020	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58173" "-no-remote" "-profile" "C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofilejEYVlX"
+1648304350274	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofilejEYVlX\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58173/devtools/browser/f3f32764-67df-43d7-bb1b-59a95a9fc7a1
+1648304352116	Marionette	INFO	Listening on port 58179
+1648304352188	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1648304473689	Marionette	INFO	Stopped listening on port 58179
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "58247" "-no-remote" "-profile" "C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofileVSjh0D"
+1648304356569	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofileVSjh0D\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58247/devtools/browser/7187310a-feea-49cd-94a0-c90b39c56863
+1648304358290	Marionette	INFO	Listening on port 58269
+1648304358377	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 4328 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 1232 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1648304376254	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 4504 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 2566 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: uncaught exception: -1
+JavaScript warning: https://z.moatads.com/improvedigitaldisplay945272226933/moatad.js#moatClientLevel1=165017&moatClientLevel2=106800&moatClientLevel3=286996&moatClientLevel4=440522&moatClientSlicer1=195514&moatClientSlicer2=1134661&zMoatRTBADV=&zMoatRTBCR=&zMoatReferrer=senscritique.com&zMoatSZ=1x1&zMoatBundle=, line 238: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 3055 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CGHVXjYJRnLTYRF6fgor0GmLhTjmHb-GVf8novFL6vc.js line 1 > eval line 1344 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CGHVXjYJRnLTYRF6fgor0GmLhTjmHb-GVf8novFL6vc.js line 1 > eval line 2045 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CGHVXjYJRnLTYRF6fgor0GmLhTjmHb-GVf8novFL6vc.js line 1 > eval line 262 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1648304464477	Marionette	INFO	Stopped listening on port 58269
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1648304469845	geckodriver	INFO	Listening on 127.0.0.1:55511
+1648304472906	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55512" "-no-remote" "-profile" "C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofiley3gFvL"
+1648304473163	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofiley3gFvL\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55512/devtools/browser/e607cbad-8001-4b9b-929f-6ceef5fdf269
+1648304475084	Marionette	INFO	Listening on port 55533
+1648304475580	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1648304521917	Marionette	INFO	Stopped listening on port 55533
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 1484, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+8304480559	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofileZL0c5y\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55612/devtools/browser/d5104e6a-a28a-4159-9993-ef1451ab524d
+1648304482285	Marionette	INFO	Listening on port 55623
+1648304482364	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 6056 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 1280 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 1354 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 7575 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: uncaught exception: -1
+1648304520487	Marionette	INFO	Stopped listening on port 55623
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1648304638761	geckodriver	INFO	Listening on 127.0.0.1:61431
+1648304641811	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61432" "-no-remote" "-profile" "C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofileCzn6XE"
+1648304642079	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofileCzn6XE\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61432/devtools/browser/c2c6ee56-3223-469c-a3e7-5d30cebe71fb
+1648304643840	Marionette	INFO	Listening on port 61437
+1648304643884	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1648304647637	Marionette	INFO	Stopped listening on port 61431648304649231	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61521" "-no-remote" "-profile" "C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofileRzsCTu"
+1648304649461	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofileRzsCTu\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61521/devtools/browser/5fa4db61-3d77-450e-bc52-25ac91c2b56a
+1648304651139	Marionette	INFO	Listening on port 61527
+1648304651275	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 888 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 6550 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 2209 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 1705 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://z.moatads.com/improvedigitaldisplay945272226933/moatad.js#moatClientLevel1=165017&moatClientLevel2=106800&moatClientLevel3=286996&moatClientLevel4=440522&moatClientSlicer1=195514&moatClientSlicer2=1134661&zMoatRTBADV=&zMoatRTBCR=&zMoatReferrer=senscritique.com&zMoatSZ=1x1&zMoatBundle=, line 238: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 5222 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CGHVXjYJRnLTYRF6fgor0GmLhTjmHb-GVf8novFL6vc.js line 1 > eval line 2664 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CGHVXjYJRnLTYRF6fgor0GmLhTjmHb-GVf8novFL6vc.js line 1 > eval line 1328 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1648304783643	Marionette	INFO	Stopped listening on port 61527
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 1468, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
