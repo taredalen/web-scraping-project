@@ -9,8 +9,9 @@ import time
 import json
 
 
-from SensCritique.SCget_review import getCommentaire
-from SensCritique.SCget_review import merge_comms
+from SCget_review import getCommentaire
+from SCget_review import merge_comms
+from WebScrapingProject.SensCritique.SCget_review import recherche
 
 
 
@@ -50,7 +51,9 @@ Data_imdb = pd.read_json('C:/Users/victo/Desktop/Codes/VS_WorkSpace/WebScrapingP
 
 
 for titre in Liste_film_traite:
-    getCommentaire(titre)
+    recherche(titre)
+    
+    #getCommentaire(titre)
 
 
 

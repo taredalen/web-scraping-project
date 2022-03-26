@@ -1,0 +1,275 @@
+1648298156193	geckodriver	INFO	Listening on 127.0.0.1:64650
+1648298159251	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64651" "-no-remote" "-profile" "C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofiler1TfdD"
+1648298159487	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofiler1TfdD\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64651/devtools/browser/2b90a64e-7c37-4296-9e13-4f6c08c0822b
+1648298161320	Marionette	INFO	Listening on port 64657
+1648298161403	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1648298210731	Marionette	INFO	Stopped listening on port 64657
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "64737" "-no-remote" "-profile" "C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofileSke4jX"
+1648298166877	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofileSke4jX\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64737/devtools/browser/44811d5f-5afc-4365-a196-f5d7d4d24e7e
+1648298168704	Marionette	INFO	Listening on port 64748
+1648298168756	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 6558 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 2194 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 2096 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 3697 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: uncaught exception: -1
+JavaScript warning: https://z.moatads.com/improvedigitaldisplay945272226933/moatad.js#moatClientLevel1=165017&moatClientLevel2=106800&moatClientLevel3=286996&moatClientLevel4=440522&moatClientSlicer1=195514&moatClientSlicer2=1134661&zMoatRTBADV=&zMoatRTBCR=&zMoatReferrer=senscritique.com&zMoatSZ=1x1&zMoatBundle=, line 238: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 5487 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1648298209143	Marionette	INFO	Stopped listening on port 64748
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 8316, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1648298361380	geckodriver	INFO	Listening on 127.0.0.1:58729
+1648298364415	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58730" "-no-remote" "-profile" "C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofileaWzRXN"
+1648298364642	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofileaWzRXN\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58730/devtools/browser/027028ef-bda2-4539-a9ea-270bc799ef6d
+1648298366307	Marionette	INFO	Listening on port 58735
+1648298366465	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1648298391418	Marionette	INFO	Stopped listening on port 58735
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1648298397931	geckodriver	INFO	Listening on 127.0.0.1:58834
+1648298400995	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58835" "-no-remote" "-profile" "C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofileybmGTR"
+1648298401246	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofileybmGTR\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58835/devtools/browser/b44062ef-98ea-41c4-a874-09a9fdff3b0f
+1648298402933	Marionette	INFO	Listening on port 58840
+1648298403051	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1648300089494	Marionette	INFO	Stopped listening on port 58840
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "58911" "-no-remote" "-profile" "C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofile1A4Ge0"
+1648298407778	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofile1A4Ge0\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58911/devtools/browser/4fae7538-1989-4300-a61a-063c7dd8fd63
+1648298409446	Marionette	INFO	Listening on port 58929
+1648298409594	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 5923 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 715 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 948 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 1357 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: uncaught exception: -1
+JavaScript warning: https://z.moatads.com/improvedigitaldisplay945272226933/moatad.js#moatClientLevel1=165017&moatClientLevel2=106800&moatClientLevel3=286996&moatClientLevel4=440522&moatClientSlicer1=195514&moatClientSlicer2=1134661&zMoatRTBADV=&zMoatRTBCR=&zMoatReferrer=senscritique.com&zMoatSZ=1x1&zMoatBundle=, line 238: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 777 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CGHVXjYJRnLTYRF6fgor0GmLhTjmHb-GVf8novFL6vc.js line 1 > eval line 6787 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://devtools/server/actors/utils/sources-manager.js, line 436: TypeError: channel is null
+JavaScript error: resource://devtools/server/actors/utils/sources-manager.js, line 436: TypeError: channel is null
+JavaScript error: resource://devtools/server/actors/utils/sources-manager.js, line 436: TypeError: channel is null
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 567"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:567:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 567, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 567: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 567"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:567:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 567, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 567: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+console.error: "Unable to find target with innerWindowId:2147484024"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 51648300091458	Marionette	INFO	Stopped listening on port 62795
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1648300090483	Marionette	INFO	Stopped listening on port 58929
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+rror: resource://devtools/server/actors/utils/sources-manager.js, line 436: TypeError: channel is null
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 567"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:567:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 567, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 567: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+console.error: "Unable to find target with innerWindowId:2147483897"
+Handler function threw an exception: [Exception... "Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIHttpChannelInternal.remoteAddress]"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: resource://devtools/server/actors/network-monitor/network-observer.js :: _onResponseHeader :: line 990"  data: no]
+Stack: _onResponseHeader@resource://devtools/server/actors/network-monitor/network-observer.js:990:5
+_dispatchActivity@resource://devtools/server/actors/network-monitor/network-observer.js:563:14
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:672:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 990, column: 0
+console.error: ({})
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 3350 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://devtools/client/jsonview/Sniffer.jsm, line 56: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIHttpChannel.contentType]
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: "Error while destroying front:" "inspector" (new Error("Connection closed, pending request to server0.conn0.windowGlobal2147483958/inspectorActor4, type getWalker failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:292:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\n_getWalker@resource://devtools/client/fronts/inspector.js:90:30\ninitialize@resource://devtools/client/fronts/inspector.js:79:12\n", "resource://devtools/shared/protocol/Front.js", 106))
+console.error: "Failed to start [root-node] legacy listener for target null" (new Error("Connection closed, pending request to server0.conn0.windowGlobal2147483958/inspectorActor4, type getWalker failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:292:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\n_getWalker@resource://devtools/client/fronts/inspector.js:90:30\ninitialize@resource://devtools/client/fronts/inspector.js:79:12\n", "resource://devtools/shared/protocol/Front.js", 106))
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 106: Error: Connection closed, pending request to server0.conn0.windowGlobal2147483958/inspectorActor4, type getWalker failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:292:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+_getWalker@resource://devtools/client/fronts/inspector.js:90:30
+initialize@resource://devtools/client/fronts/inspector.js:79:12
+
+console.error: "Unable to find target with innerWindowId:2147483958"
+console.error: "Unable to find target with innerWindowId:2147483958"
+console.error: "Unable to find target with innerWindowId:2147483958"
+console.error: "Unable to find target with innerWindowId:2147483958"
+console.error: "Unable to find target with innerWindowId:2147483958"
+JavaScript error: resource://devtools/client/framework/toolbox.js, line 3452: TypeError: data.frameData.id is null
+JavaScript warning: https://z.moatads.com/smilewanted101495534310/moatvideo.js#_moatApi68679440, line 245: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://player.aniview.com/script/6.1/AVmanager.js?AV_PUBLISHERID=5ef4bc022e79664d2b473869, line 4: uncaught exception: -1
+console.error: "Unable to find target with innerWindowId:2147483999"
+JavaScript warning: https://z.moatads.com/improvedigitaldisplay945272226933/moatad.js#moatClientLevel1=165017&moatClientLevel2=106800&moatClientLevel3=286996&moatClientLevel4=440522&moatClientSlicer1=195514&moatClientSlicer2=1134661&zMoatRTBADV=&zMoatRTBCR=&zMoatReferrer=senscritique.com&zMoatSZ=1x1&zMoatBundle=, line 238: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 5365 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://devtools/client/framework/toolbox.js, line 3452: TypeError: data.frameData.id is null
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CGHVXjYJRnLTYRF6fgor0GmLhTjmHb-GVf8novFL6vc.js line 1 > eval line 6041 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: "Async method failed in safeAsyncMethod" (new Error("Connection closed, pending request to server0.conn0.windowGlobal2147484072/layout25, type getGrids failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:292:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\ngetAllGrids@resource://devtools/client/fronts/layout.js:171:17\nexports.safeAsyncMethod/<@resource://devtools/shared/async-utils.js:61:25\ngetGrids@resource://devtools/client/inspector/grids/grid-inspector.js:449:35\n", "resource://devtools/shared/protocol/Front.js", 106))
+console.error: "Unable to find target with innerWindowId:2147484065"
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CGHVXjYJRnLTYRF6fgor0GmLhTjmHb-GVf8novFL6vc.js line 1 > eval line 4399 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: "Failed to start [root-node] legacy listener for target null" (new Error("Connection closed, pending request to server0.conn0.windowGlobal2147484102/domwalker23, type watchRootNode failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:292:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\nmodule.exports@resource://devtools/shared/commands/resource/legacy-listeners/root-node.js:60:31\n", "resource://devtools/shared/protocol/Front.js", 106))
+console.error: "Unable to find target with innerWindowId:2147484089"
+console.error: "Unable to find target with innerWindowId:2147484114"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1648301905757	Marionette	INFO	Stopped listening on port 62890
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[Parent 20168, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1648301916656	geckodriver	INFO	Listening on 127.0.0.1:64610
+1648301919704	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64611" "-no-remote" "-profile" "C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofilehwMjik"
+1648301919962	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofilehwMjik\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64611/devtools/browser/08a431f8-117d-40d1-a1cd-0c6a6bce1e2f
+1648301921697	Marionette	INFO	Listening on port 64616
+1648301921755	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1648302159284	Marionette	INFO	Stopped listening on port 64616
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\victo\\AppData\\Local\\Temp\\rust_mozprofileWgyh0e\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64683/devtools/browser/b4a8cf21-4216-4d82-81f4-26d110c4f355
+1648301928157	Marionette	INFO	Listening on port 64704
+1648301928250	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 1285 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: uncaught exception: -1
+JavaScript warning: https://z.moatads.com/improvedigitaldisplay945272226933/moatad.js#moatClientLevel1=165017&moatClientLevel2=106800&moatClientLevel3=286996&moatClientLevel4=440522&moatClientSlicer1=195514&moatClientSlicer2=1134661&zMoatRTBADV=&zMoatRTBCR=&zMoatReferrer=senscritique.com&zMoatSZ=1x1&zMoatBundle=, line 238: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 1588 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 857 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 7326 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 1006 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 2 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 6552 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: uncaught exception: -1
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 30 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://devtools/server/actors/utils/sources-manager.js, line 436: TypeError: channel is null
+JavaScript error: resource://devtools/server/actors/utils/sources-manager.js, line 436: TypeError: channel is null
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 567"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:567:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 567, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 567: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+JavaScript error: https://static.senscritique.com/lib/optimized_ln/layouts/default.html.min.js?datetime=20220324094148, line 1: NotFoundError: Node.removeChild: The node to be removed is not a child of this node
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 1324 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://devtools/client/framework/toolbox.js, line 3452: TypeError: data.frameData.id is null
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 894 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://devtools/client/framework/toolbox.js, line 3452: TypeError: data.frameData.id is null
+console.error: "Unable to find target with innerWindowId:2147484192"
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.error: "Error when attaching target:" (new Error("Connection closed, pending request to server0.conn0.windowGlobal2147484222/thread1, type isAttached failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:292:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\nattachThread@resource://devtools/client/fronts/targets/target-mixin.js:572:49\n", "resource://devtools/shared/protocol/Front.js", 106))
+console.warn: "Error while destroying front:" "inspector" (new Error("Connection closed, pending request to server0.conn0.windowGlobal2147484222/inspectorActor4, type getWalker failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:292:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\n_getWalker@resource://devtools/client/fronts/inspector.js:90:30\ninitialize@resource://devtools/client/fronts/inspector.js:79:12\n", "resource://devtools/shared/protocol/Front.js", 106))
+console.error: (new Error("Unexpected packet server0.conn0.windowGlobal2147484222/thread1, {\"value\":true,\"from\":\"server0.conn0.windowGlobal2147484222/thread1\"}", "resource://devtools/shared/protocol/Front.js", 344))
+Handler function LocalDebuggerTransport instance's this.other.hooks.onPacket threw an exception: Error: Unexpected packet server0.conn0.windowGlobal2147484222/thread1, {"value":true,"from":"server0.conn0.windowGlobal2147484222/thread1"}
+Stack: onPacket@resource://devtools/shared/protocol/Front.js:344:24
+onPacket@resource://devtools/client/devtools-client.js:482:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 344, column: 24
+console.error: (new Error("Unexpected packet server0.conn0.windowGlobal2147484222/thread1, {\"value\":true,\"from\":\"server0.conn0.windowGlobal2147484222/thread1\"}", "resource://devtools/shared/protocol/Front.js", 344))
+console.error: (new Error("Unexpected packet server0.conn0.windowGlobal2147484222/inspectorActor4, {\"walker\":{\"actor\":\"server0.conn0.windowGlobal2147484222/domwalker23\",\"root\":{\"actor\":\"server0.conn0.windowGlobal2147484222/domnode22\",\"baseURI\":\"https://s.amazon-adsystem.com/ecm3?ex=cnv.com&id=AAAGoBaie9mqFgNAbGHvAAAAAAA&expiration=1648388518&is_secure=true&gdpr_consent=CPWduoePWduoeEsABBFRCICoAP_AAH_AAAqIHmNB_X_vbHNjSfxd_LtQMIlfx8LGO-QijATJB2QBWC7WqL0X_0AYFFSyhooKsQYgsiZBIQIMCInUTUCRSABErTGgAkCAhiEKJ7LkmlsBAmFIEHtCF5lDiAAI6P5o_yLQ0w9M-8a0zczz_8E91_N19-3--nDef495j6m7QPMYD-N2e2ObGkfiTeXagQRK-j4UMV8BFGAGCDsgAMF0tUVgN-oAwAKllBRAVYgxBZEwCQgQQABOIioEigACIWiEAAAABBAIQQ2XJMLYCAMCQANIEDxCCEAARwdzQSEShghqR1w1pm5lGtYJrjiZKp8HdpOG09xbTHkIWgAA.f_gAAAAAAAA&gdpr=1\",\"nodeType\":9,\"nodeName\":\"#document\",\"nodeValue\":null,\"displayName\":\"#document\",\"numChildren\":1,\"displayType\":null,\"isScrollable\":false,\"isTopLevelDocument\":true,\"causesOverflow\":false,\"isMarkerPseudoElement\":false,\"isBeforePseudoElement\":false,\"isAfterPseudoElement\":false,\"isAnonymous\":false,\"isNativeAnonymous\":false,\"isShadowRoot\":false,\"shadowRootMode\":null,\"isDirectShadowHostChild\":null,\"mutationBreakpoints\":{\"subtree\":false,\"removal\":false,\"attribute\":false},\"isDisplayed\":true,\"isInHTMLDocument\":null,\"hasEventListeners\":false,\"traits\":{}},\"traits\":{}},\"from\":\"server0.conn0.windowGlobal2147484222/inspectorActor4\"}", "resource://devtools/shared/protocol/Front.js", 344))
+Handler function LocalDebuggerTransport instance's this.other.hooks.onPacket threw an exception: Error: Unexpected packet server0.conn0.windowGlobal2147484222/inspectorActor4, {"walker":{"actor":"server0.conn0.windowGlobal2147484222/domwalker23","root":{"actor":"server0.conn0.windowGlobal2147484222/domnode22","baseURI":"https://s.amazon-adsystem.com/ecm3?ex=cnv.com&id=AAAGoBaie9mqFgNAbGHvAAAAAAA&expiration=1648388518&is_secure=true&gdpr_consent=CPWduoePWduoeEsABBFRCICoAP_AAH_AAAqIHmNB_X_vbHNjSfxd_LtQMIlfx8LGO-QijATJB2QBWC7WqL0X_0AYFFSyhooKsQYgsiZBIQIMCInUTUCRSABErTGgAkCAhiEKJ7LkmlsBAmFIEHtCF5lDiAAI6P5o_yLQ0w9M-8a0zczz_8E91_N19-3--nDef495j6m7QPMYD-N2e2ObGkfiTeXagQRK-j4UMV8BFGAGCDsgAMF0tUVgN-oAwAKllBRAVYgxBZEwCQgQQABOIioEigACIWiEAAAABBAIQQ2XJMLYCAMCQANIEDxCCEAARwdzQSEShghqR1w1pm5lGtYJrjiZKp8HdpOG09xbTHkIWgAA.f_gAAAAAAAA&gdpr=1","nodeType":9,"nodeName":"#document","nodeValue":null,"displayName":"#document","numChildren":1,"displayType":null,"isScrollable":false,"isTopLevelDocument":true,"causesOverflow":false,"isMarkerPseudoElement":false,"isBeforePseudoElement":false,"isAfterPseudoElement":false,"isAnonymous":false,"isNativeAnonymous":false,"isShadowRoot":false,"shadowRootMode":null,"isDirectShadowHostChild":null,"mutationBreakpoints":{"subtree":false,"removal":false,"attribute":false},"isDisplayed":true,"isInHTMLDocument":null,"hasEventListeners":false,"traits":{}},"traits":{}},"from":"server0.conn0.windowGlobal2147484222/inspectorActor4"}
+Stack: onPacket@resource://devtools/shared/protocol/Front.js:344:24
+onPacket@resource://devtools/client/devtools-client.js:482:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 344, column: 24
+console.error: (new Error("Unexpected packet server0.conn0.windowGlobal2147484222/inspectorActor4, {\"walker\":{\"actor\":\"server0.conn0.windowGlobal2147484222/domwalker23\",\"root\":{\"actor\":\"server0.conn0.windowGlobal2147484222/domnode22\",\"baseURI\":\"https://s.amazon-adsystem.com/ecm3?ex=cnv.com&id=AAAGoBaie9mqFgNAbGHvAAAAAAA&expiration=1648388518&is_secure=true&gdpr_consent=CPWduoePWduoeEsABBFRCICoAP_AAH_AAAqIHmNB_X_vbHNjSfxd_LtQMIlfx8LGO-QijATJB2QBWC7WqL0X_0AYFFSyhooKsQYgsiZBIQIMCInUTUCRSABErTGgAkCAhiEKJ7LkmlsBAmFIEHtCF5lDiAAI6P5o_yLQ0w9M-8a0zczz_8E91_N19-3--nDef495j6m7QPMYD-N2e2ObGkfiTeXagQRK-j4UMV8BFGAGCDsgAMF0tUVgN-oAwAKllBRAVYgxBZEwCQgQQABOIioEigACIWiEAAAABBAIQQ2XJMLYCAMCQANIEDxCCEAARwdzQSEShghqR1w1pm5lGtYJrjiZKp8HdpOG09xbTHkIWgAA.f_gAAAAAAAA&gdpr=1\",\"nodeType\":9,\"nodeName\":\"#document\",\"nodeValue\":null,\"displayName\":\"#document\",\"numChildren\":1,\"displayType\":null,\"isScrollable\":false,\"isTopLevelDocument\":true,\"causesOverflow\":false,\"isMarkerPseudoElement\":false,\"isBeforePseudoElement\":false,\"isAfterPseudoElement\":false,\"isAnonymous\":false,\"isNativeAnonymous\":false,\"isShadowRoot\":false,\"shadowRootMode\":null,\"isDirectShadowHostChild\":null,\"mutationBreakpoints\":{\"subtree\":false,\"removal\":false,\"attribute\":false},\"isDisplayed\":true,\"isInHTMLDocument\":null,\"hasEventListeners\":false,\"traits\":{}},\"traits\":{}},\"from\":\"server0.conn0.windowGlobal2147484222/inspectorActor4\"}", "resource://devtools/shared/protocol/Front.js", 344))
+console.error: (new Error("Unexpected packet server0.conn0.windowGlobal2147484222/inspectorActor4, {\"pageStyle\":{\"actor\":\"server0.conn0.windowGlobal2147484222/pagestyle24\",\"traits\":{\"fontStretchLevel4\":true,\"fontStyleLevel4\":true,\"fontVariations\":true,\"fontWeightLevel4\":true}},\"from\":\"server0.conn0.windowGlobal2147484222/inspectorActor4\"}", "resource://devtools/shared/protocol/Front.js", 344))
+Handler function LocalDebuggerTransport instance's this.other.hooks.onPacket threw an exception: Error: Unexpected packet server0.conn0.windowGlobal2147484222/inspectorActor4, {"pageStyle":{"actor":"server0.conn0.windowGlobal2147484222/pagestyle24","traits":{"fontStretchLevel4":true,"fontStyleLevel4":true,"fontVariations":true,"fontWeightLevel4":true}},"from":"server0.conn0.windowGlobal2147484222/inspectorActor4"}
+Stack: onPacket@resource://devtools/shared/protocol/Front.js:344:24
+onPacket@resource://devtools/client/devtools-client.js:482:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 344, column: 24
+console.error: (new Error("Unexpected packet server0.conn0.windowGlobal2147484222/inspectorActor4, {\"pageStyle\":{\"actor\":\"server0.conn0.windowGlobal2147484222/pagestyle24\",\"traits\":{\"fontStretchLevel4\":true,\"fontStyleLevel4\":true,\"fontVariations\":true,\"fontWeightLevel4\":true}},\"from\":\"server0.conn0.windowGlobal2147484222/inspectorActor4\"}", "resource://devtools/shared/protocol/Front.js", 344))
+JavaScript error: https://player.aniview.com/script/6.1/AVmanager.js?AV_PUBLISHERID=5ef4bc022e79664d2b473869, line 4: uncaught exception: -1
+console.error: "Unable to find target with innerWindowId:2147484244"
+console.error: "Unable to find target with innerWindowId:2147484244"
+JavaScript warning: https://pagead2.googlesyndication.com/bg/XFpjqGQyXlGhrIMtqUZEtOx9ZrcGJnYAFO97-LZexEg.js line 1 > eval line 7602 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://devtools/client/framework/toolbox.js, line 3452: TypeError: data.frameData.id is null
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+console.warn: "Failed to add session data entry for frame targets in browsing context" 2147483944
+console.warn: (new AbortError("Actor 'DevToolsFrame' destroyed before query 'DevToolsFrameParent:addSessionDataEntry' was resolved", (void 0)))
+console.error: "Unable to find target with innerWindowId:2147484278"
