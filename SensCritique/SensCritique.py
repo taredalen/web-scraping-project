@@ -8,13 +8,18 @@ from selenium.webdriver.common.by import By
 import time
 import json
 
+
+from SensCritique.SCget_review import getCommentaire
+from SensCritique.SCget_review import merge_comms
+
+
+
+
 driver = webdriver.Firefox()
 
 Liste_note = []
 liste_film =[]
 Liste_film_traite = []
-Liste_commentaire = []
-Liste_commentaire_titre = []
 Liste_complete = {}
 dictionnaire = {}
 Liste_film_to_search = []
@@ -41,30 +46,18 @@ for element in range(100):
 
 
 
-def getCommentaire(films_select):
-    driver.find_elements()
-    Liste_commentaire_titre.append(driver.find_elements(By.CLASS_NAME,'ere-review-heading').text)
-    Liste_commentaire.append(driver.find_elements(By.CLASS_NAME,'ere-review-excerpt').text)
-
-
-def merge_comms(liste_comm,liste_titre):
-    Frame_commentaire = pd.DataFrame({"titre":liste_titre,"commentaire":liste_comm})
-    Frame_commentaire.to_csv('SensCritique.csv',sep = ";")
-
 Data_imdb = pd.read_json('C:/Users/victo/Desktop/Codes/VS_WorkSpace/WebScrapingProject/imdb/data.json')
+
+
+for titre in Liste_film_traite:
+    getCommentaire(titre)
+
+
+
 
 
 for title in Data_imdb.keys():
     Liste_film_to_search.append(title)
-
-
-
-
-
-
-
-
-
 
 
 #dictionnaire['commentaire'] = Liste_commentaire
