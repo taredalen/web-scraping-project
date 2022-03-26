@@ -1,6 +1,7 @@
 import re
 import json
 import time
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -11,12 +12,11 @@ from imdb.user_reviews import get_user_reviews
 start = time.time()
 print("starting")
 
-film_data = {}
 film_rows = []
 
 request = requests.get('https://www.imdb.com/chart/top/?ref_=nv_mv_250')
 
-for film in range(0, 2):
+for film in range(0, 100):
 
     time.sleep(0.8)
 
@@ -79,14 +79,16 @@ for film in range(0, 2):
                   'users reviews': get_user_reviews(user_review_url),
                   'critics reviews': get_reviews(critic_review_url)}
 
-    film_data['title'] = original_name
-    film_data['results'] = [dictionary]
+    film_data = {'title': original_name, 'results': [dictionary]}
 
     print('{} {}'.format(film, original_name))
     film_rows.append(film_data)
 
-end = time.time()
-print(end - start)
-
 with open('data.json', 'w') as outfile:
     json.dump(film_rows, outfile, indent=1)
+
+
+def convert(seconds):
+    return time.strftime("%H:%M:%S", time.gmtime(seconds))
+
+print("{}".format(convert(time.time() - start)))
