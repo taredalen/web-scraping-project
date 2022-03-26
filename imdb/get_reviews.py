@@ -1,16 +1,15 @@
 from bs4 import BeautifulSoup
 import requests
-import json
 import time
 
 
 def get_reviews(url):
     request = requests.get(url)
     soup = BeautifulSoup(request.text, 'lxml')
-    reviews = soup.find_all("a", {"class": "tracked-offsite-link" })
-    filter = ["Roger Ebert", "ReelViews", "Washington Post", 
-            "1,001 Movies Reviewed Before You Die", "1,001 Movies Reviewed Before You Die", "rogerebert.com",
-            "New York Times"]
+    reviews = soup.find_all("a", {"class": "tracked-offsite-link"})
+    filter = ["Roger Ebert", "ReelViews", "Washington Post",
+              "1,001 Movies Reviewed Before You Die", "1,001 Movies Reviewed Before You Die", "rogerebert.com",
+              "New York Times"]
     review_list = []
     for review in reviews:
         for filt in filter:

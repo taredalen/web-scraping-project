@@ -1,8 +1,10 @@
 import time
 import requests
 from bs4 import BeautifulSoup
+
 from selenium import webdriver
 from selenium.webdriver.support.select import Select
+
 import warnings
 warnings.filterwarnings("ignore")
 
