@@ -18,5 +18,5 @@ def merge_comms(liste_comm,liste_titre):
     return Frame_commentaire
 
 def recherche(titre,driver):
-    recherche = driver.find_element(By.CLASS_NAME,'_1ubz4flJX9nhcvdMnRV6CA')
+    recherche = driver.find_element(By.CLASS_NAME,'_25jdusMm9PFEdy9TPVD0IK')
     recherche.send_keys(titre)
