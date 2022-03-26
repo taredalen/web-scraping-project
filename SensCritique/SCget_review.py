@@ -1,22 +1,19 @@
-from selenium import webdriver
+
 from selenium.webdriver.common.by import By
 import pandas as pd
 
 
 
-Liste_commentaire = []
-Liste_commentaire_titre = []
-
-def getCommentaire(driver):
-    Liste_commentaire_titre.append(driver.find_elements(By.CLASS_NAME,'ere-review-heading').text)
-    Liste_commentaire.append(driver.find_elements(By.CLASS_NAME,'ere-review-excerpt').text)
+def getCommentaire(Liste_titre,liste_comm,driver):
+    Liste_titre.append(driver.find_elements(By.CLASS_NAME,'ere-review-heading'))
+    liste_comm.append(driver.find_elements(By.CLASS_NAME,'ere-review-excerpt'))
 
 
-def merge_comms(liste_comm,liste_titre):
-    Frame_commentaire = pd.DataFrame({"titre":liste_titre,"commentaire":liste_comm})
+def merge_comms(liste_titre,liste_comm):
+    Frame_commentaire = pd.DataFrame({"titre_comm":liste_titre,"commentaire":liste_comm})
     Frame_commentaire.to_csv('SensCritique.csv',sep = ";")
     return Frame_commentaire
 
-def recherche(titre,driver):
-    recherche = driver.find_element(By.CLASS_NAME,'_25jdusMm9PFEdy9TPVD0IK')
-    recherche.send_keys(titre)
+def traitement_valeurs(Liste):
+    for values in range (len(Liste[0])):
+        Liste[0][values] = Liste[0][values].text
