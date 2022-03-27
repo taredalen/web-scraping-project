@@ -4,7 +4,7 @@ import json
 import time
 import re
 
-from imdb.reviews import get_user_reviews,  get_critics_reviews
+from imdb.reviews import get_critics_reviews, get_user_reviews_bs
 
 start = time.time()
 print('starting')
@@ -72,7 +72,7 @@ for film in range(0, 100):
                   'metascore': metascore,
                   'user review url': user_review_url,
                   'critic review url': critic_review_url,
-                  'users reviews': get_user_reviews(user_review_url),
+                  'users reviews': get_user_reviews_bs(link+'reviews?sort=userRating&dir=asc&ratingFilter=0'),
                   'critics reviews': get_critics_reviews(critic_review_url)}
 
     film_data = {'title': original_name, 'results': [dictionary]}
