@@ -11,13 +11,11 @@ import json
 
 from SCget_review import getCommentaire
 from SCget_review import merge_comms
-from SCget_review import traitement_valeurs
 
 driver = webdriver.Firefox()
 
 Liste_note = []
 liste_film = []
-liste_film_annee = []
 Liste_film_traite = []
 Liste_film_to_search = []
 
@@ -45,50 +43,38 @@ for film in range (len(Liste_film_traite)):
     Liste_film_traite[film] = Liste_film_traite[film].split("  ")
 
 
-Data_imdb = pd.read_json('./IMDB/data.json')
-
-
-for titre in range(3):
-    Liste_commentaire = []
-    Liste_commentaire_titre = []
+#Data_imdb = pd.read_json('./imdb/data.json')
+Liste_commentaire = []
+Liste_commentaire_titre = []
+Liste_result = []
+film_data2 = []
+Liste_result2 = []
+for titre in range(len(Liste_film_traite)):
     recherche = driver.find_element(By.CLASS_NAME,'_25jdusMm9PFEdy9TPVD0IK')
     recherche.send_keys(Liste_film_traite[titre][0])
-    time.sleep(5)
+    time.sleep(2)
     Explorer = driver.find_element(By.CLASS_NAME,'_3mHi2AhyGxzjT4yEFxyS1g')
-    time.sleep(5)
+    time.sleep(2)
     Explorer.click()
     time.sleep(2)
     getCommentaire(Liste_commentaire_titre,Liste_commentaire,driver)
     time.sleep(2)
+    for nb_comm in range(len(Liste_commentaire[titre])):
+        dictionaire = {
+            "titre_commentaire": Liste_commentaire_titre[titre][nb_comm],
+            "commentaire": Liste_commentaire[titre][nb_comm]
+            }
+        Liste_result.append(dictionaire)
 
 
-traitement_valeurs(Liste_commentaire_titre)
-traitement_valeurs(Liste_commentaire)
-
-for annee in Liste_film_traite:
-    liste_film_annee.append(annee[1])
-
-for i in range (len(Liste_commentaire_titre)):
-    dictionnary = {
-        'titre' : Liste_commentaire_titre[0][i],
-        'commentaire' : Liste_commentaire[0][i]
-    }
-    Film_data = {"title": Liste_film_traite[i], "result": dictionnary }
-
-"""
-====================================================================
-
-MSG pour yohan
-pr l'instant l'intégration dans le fichier json écrale les valeurs précédantes 
-parceque je stocke les valeur directement dans le fichier json.Il faudrais que tu 
-stocke les valeur dans une liste externe et que ensuite tu le met dans le fichier json
-n'oublie pas de le faire dans le même format que le ficheir json de nos coéquipier
-
-====================================================================
-
-"""
-
+    film_data = {
+        "titre_du_film": Liste_film_traite[titre][0],
+        "annnee": Liste_film_traite[titre][1],
+        "result": [Liste_result]
+        }
+    film_data2.append(film_data)
+    Liste_result = []
 with open('data_Senscritique.json','w') as outfile:
-   json.dump(Film_data, outfile, indent = 1)
+   json.dump(film_data2, outfile, indent = 1)
 
 driver.close()
