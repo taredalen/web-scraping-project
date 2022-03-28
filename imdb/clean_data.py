@@ -2,7 +2,6 @@ import json
 import sys, os
 
 sys.path.insert(0, str(os.getcwd()) + '/TextAnalyzer')
-print(os.getcwd())
 
 from analyze import text_analyze
 
