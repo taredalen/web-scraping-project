@@ -45,7 +45,7 @@ for film in range (len(Liste_film_traite)):
     Liste_film_traite[film] = Liste_film_traite[film].split("  ")
 
 
-Data_imdb = pd.read_json('./imdb/data.json')
+Data_imdb = pd.read_json('./IMDB/data.json')
 
 
 for titre in range(3):
