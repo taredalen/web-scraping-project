@@ -6,3 +6,8 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+myenv/
+imdb/geckodriver.log
+SensCritique/geckodriver.log
+SensCritique/__pycache__
+TextAnalyzer/__pycache__
