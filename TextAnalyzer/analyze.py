@@ -1,8 +1,7 @@
 import spacy
-from nltk import pos_tag
 from textblob import TextBlob
 from textblob_fr import PatternTagger, PatternAnalyzer
-from nltk.probability import FreqDist
+from collections import Counter
 
 
 def punc_filter(doc):
@@ -24,13 +23,16 @@ def text_analyze(text, language='en'):
     if language == 'fr':
         nlp = spacy.load('fr_core_news_md')
         args = {"pos_tagger": PatternTagger(), "analyzer": PatternAnalyzer()}
-
+    
     doc = nlp(text)
     doc = punc_filter(doc)
     doc = stopword_filter(doc)
     lem = lemma(doc)
+    
+    #blob = TextBlob(' '.join(lem), **args)
+    
+    adj = [token.lemma_ for token in doc if (not token.is_stop and not token.is_punct and token.pos_ == "ADJ")]
 
-    freq = FreqDist(lem)
-    blob = TextBlob(' '.join(lem), **args)
-
-    return {"sentiment": blob.sentiment[0], "subjectivity": blob.sentiment[1], "most used word": freq.most_common(10)}
+    doc = [token.text for token in doc]
+    blob = TextBlob(' '.join(doc), **args)
+    return {"sentiment": blob.sentiment[0], "subjectivity": blob.sentiment[1], "most used adj": Counter(adj).most_common(10)}

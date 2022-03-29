@@ -10,7 +10,9 @@ import warnings
 warnings.filterwarnings("ignore")
 
 def get_critics_reviews(url):
-    request = requests.get(url)
+    
+    header = {'User-Agent': '"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36"'}
+    request = requests.get(url, headers=header)
     soup = BeautifulSoup(request.text, 'lxml')
     reviews = soup.find_all("a", {"class": "tracked-offsite-link"})
     filter = ["Roger Ebert", "ReelViews", "Washington Post",
