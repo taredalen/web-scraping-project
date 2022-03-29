@@ -6,17 +6,16 @@ import time
 from IMDB.reviews import get_critics_reviews, get_user_reviews_bs
 
 def initiate_scrapping():
-
+    print('start')
     film_rows = []
 
     request = requests.get('https://www.imdb.com/chart/top/?ref_=nv_mv_250')
 
-    for film in range(0, 2):
+    for film in range(0, 100):
 
         time.sleep(0.8)
 
         list_genre = []
-        list_boxes = []
 
         soup = BeautifulSoup(request.text, 'lxml')
         filmes = soup.find('tbody', {'class': 'lister-list'}).find_all('tr')[film]

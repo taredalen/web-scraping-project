@@ -71,7 +71,6 @@ def get_user_reviews_bs(url):
 
     reviews = soup.find('div', {'class': 'lister-list'}).find_all('div')
     for review in soup.find_all('div',  {'class': 'lister-item-content'}):
-
         dictionary = {'title': review.find('a').text,
                       'content': review.find('div', {'class': 'text show-more__control'}).text}
         list_reviews.append(dictionary)
