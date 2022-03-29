@@ -49,7 +49,8 @@ Liste_commentaire_titre = []
 Liste_result = []
 film_data2 = []
 Liste_result2 = []
-for titre in range(len(Liste_film_traite)):
+
+for titre in range(3):
     recherche = driver.find_element(By.CLASS_NAME,'_25jdusMm9PFEdy9TPVD0IK')
     recherche.send_keys(Liste_film_traite[titre][0])
     time.sleep(2)
@@ -57,6 +58,9 @@ for titre in range(len(Liste_film_traite)):
     time.sleep(2)
     Explorer.click()
     time.sleep(2)
+    genre = driver.find_elements(By.CLASS_NAME,'lahe-breadcrumb-anchor')
+    time.sleep(2)
+    Score = driver.find_element(By.CLASS_NAME,'pvi-scrating-value').text
     getCommentaire(Liste_commentaire_titre,Liste_commentaire,driver)
     time.sleep(2)
     for nb_comm in range(len(Liste_commentaire[titre])):
@@ -65,15 +69,16 @@ for titre in range(len(Liste_film_traite)):
             "commentaire": Liste_commentaire[titre][nb_comm]
             }
         Liste_result.append(dictionaire)
-
-
     film_data = {
         "titre_du_film": Liste_film_traite[titre][0],
         "annnee": Liste_film_traite[titre][1],
+        "genre": genre[2].text,
+        "score": Score,
         "result": [Liste_result]
         }
     film_data2.append(film_data)
     Liste_result = []
+    time.sleep(2)
 with open('data_Senscritique.json','w') as outfile:
    json.dump(film_data2, outfile, indent = 1)
 
