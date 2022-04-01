@@ -1,12 +1,14 @@
+from datetime import time
 
 from selenium.webdriver.common.by import By
 import pandas as pd
+from bs4 import BeautifulSoup
+import requests
 
 
-
-def getCommentaire(Liste_titre,liste_comm,driver):
-    titre2 = driver.find_elements(By.CLASS_NAME,'ere-review-heading')
-    commentaire = driver.find_elements(By.CLASS_NAME,'ere-review-excerpt')
+def getCommentaire(Liste_titre, liste_comm, driver):
+    titre2 = driver.find_elements(By.CLASS_NAME, 'ere-review-heading')
+    commentaire = driver.find_elements(By.CLASS_NAME, 'ere-review-excerpt')
     for i in range(len(titre2)):
         titre2[i] = titre2[i].text
     Liste_titre.append(titre2)
