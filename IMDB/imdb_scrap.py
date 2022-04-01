@@ -2,8 +2,11 @@ from bs4 import BeautifulSoup
 import requests
 import json
 import time
+import sys, os
 
-from IMDB.reviews import get_critics_reviews, get_user_reviews_bs
+sys.path.insert(0, str(os.getcwd()) + '/IMDB')
+
+from reviews import get_critics_reviews, get_user_reviews_bs
 
 def initiate_scrapping():
     print('start')
@@ -11,7 +14,7 @@ def initiate_scrapping():
 
     request = requests.get('https://www.imdb.com/chart/top/?ref_=nv_mv_250')
 
-    for film in range(0, 100):
+    for film in range(48, 50):
 
         time.sleep(0.8)
 
