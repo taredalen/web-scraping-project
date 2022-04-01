@@ -56,6 +56,7 @@ def initiate_scrapping():
         dictionary = {'link': link,
                       'year': year.text.replace(')', ''),
                       'genre': ' '.join(list_genre),
+                      'name': name.text,
                       'rating': rating.text,
                       'metascore': metascore,
                       'user review url': user_review_url,
