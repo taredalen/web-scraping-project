@@ -59,10 +59,13 @@ for titre in range(len(Liste_film_traite)):
     time.sleep(2)
     Explorer.click()
     time.sleep(2)
-    genre = driver.find_elements(By.CLASS_NAME,'lahe-breadcrumb-anchor')[2].text
+    try:
+        genre = driver.find_elements(By.CLASS_NAME,'lahe-breadcrumb-anchor')[2].text
+    except IndexError:
+        genre = "Null"
     time.sleep(2)
     Score = driver.find_element(By.CLASS_NAME,'pvi-scrating-value').text
-    critiques = driver.find_elements(By.CLASS_NAME,'d-menu-item')[2].click()
+    critiques = driver.find_element(By.LINK_TEXT,'Critiques').click()
     current_link = driver.current_url
     review_link = get_review_link(current_link)
     for critique in review_link:
