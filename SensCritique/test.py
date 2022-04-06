@@ -14,6 +14,5 @@ def get_review_link(url):
 
     reviews = soup.find('section', {'class': 'd-grid-main'}).find_all('article')
     for review in reviews:
-        print(review.find('a', {'class': 'ere-review-anchor'}).get('href'))
-
-get_review_link('https://www.senscritique.com/film/en_corps/43558610/critiques')
+        list_reviews.append(review.find('a', {'class': 'ere-review-anchor'}).get('href'))
+    return list_reviews

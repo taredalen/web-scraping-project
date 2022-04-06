@@ -5,12 +5,14 @@ from selenium import webdriver
 import pandas as pd
 import selenium
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 import time
 import json
 
 
 from SCget_review import getCommentaire
 from SCget_review import merge_comms
+from test import get_review_link
 
 driver = webdriver.Firefox()
 
@@ -43,14 +45,13 @@ for film in range (len(Liste_film_traite)):
     Liste_film_traite[film] = Liste_film_traite[film].split("  ")
 
 
-#Data_imdb = pd.read_json('./imdb/data.json')
 Liste_commentaire = []
 Liste_commentaire_titre = []
 Liste_result = []
 film_data2 = []
 Liste_result2 = []
 
-for titre in range(3):
+for titre in range(len(Liste_film_traite)):
     recherche = driver.find_element(By.CLASS_NAME,'_25jdusMm9PFEdy9TPVD0IK')
     recherche.send_keys(Liste_film_traite[titre][0])
     time.sleep(2)
@@ -58,27 +59,43 @@ for titre in range(3):
     time.sleep(2)
     Explorer.click()
     time.sleep(2)
-    genre = driver.find_elements(By.CLASS_NAME,'lahe-breadcrumb-anchor')
+    try:
+        genre = driver.find_elements(By.CLASS_NAME,'lahe-breadcrumb-anchor')[2].text
+    except IndexError:
+        genre = "Null"
     time.sleep(2)
     Score = driver.find_element(By.CLASS_NAME,'pvi-scrating-value').text
-    getCommentaire(Liste_commentaire_titre,Liste_commentaire,driver)
+    critiques = driver.find_element(By.LINK_TEXT,'Critiques').click()
+    current_link = driver.current_url
+    review_link = get_review_link(current_link)
+    for critique in review_link:
+        link = driver.find_element(By.XPATH,'//a[@href="'+critique+'"]').click()
+        getCommentaire(Liste_commentaire_titre,Liste_commentaire,driver)
+        driver.back()
+        time.sleep(2)
+        
+    
     time.sleep(2)
-    for nb_comm in range(len(Liste_commentaire[titre])):
+    for nb_comm in range(len(Liste_commentaire)):
         dictionaire = {
-            "titre_commentaire": Liste_commentaire_titre[titre][nb_comm],
-            "commentaire": Liste_commentaire[titre][nb_comm]
+            "titre_commentaire": Liste_commentaire_titre[nb_comm],
+            "commentaire": Liste_commentaire[nb_comm]
             }
         Liste_result.append(dictionaire)
     film_data = {
         "titre_du_film": Liste_film_traite[titre][0],
         "annnee": Liste_film_traite[titre][1],
-        "genre": genre[2].text,
+        "genre": genre,
         "score": Score,
         "result": [Liste_result]
         }
     film_data2.append(film_data)
+    driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + Keys.HOME)
     Liste_result = []
+    Liste_commentaire_titre = []
+    Liste_commentaire = []
     time.sleep(2)
+    
 with open('data_Senscritique.json','w') as outfile:
    json.dump(film_data2, outfile, indent = 1)
 
