@@ -15,9 +15,7 @@ def get_critics_reviews(url):
     request = requests.get(url, headers=header)
     soup = BeautifulSoup(request.text, 'lxml')
     reviews = soup.find_all("a", {"class": "tracked-offsite-link"})
-    filter = ["Roger Ebert", "ReelViews", "Washington Post",
-              "1,001 Movies Reviewed Before You Die", "1,001 Movies Reviewed Before You Die", "rogerebert.com",
-              "New York Times"]
+    filter = ["Roger Ebert", "ReelViews", "Washington Post", "rogerebert.com", "New York Times"]
     review_list = []
     for review in reviews:
         for filt in filter:
