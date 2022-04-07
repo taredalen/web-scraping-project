@@ -4,6 +4,10 @@ print wjdata['data']['current_condition'][0]['temp_C']
 
 ----
 
+pip show ipympl
+
+
+
 
 start = time.time()
 print('starting')
