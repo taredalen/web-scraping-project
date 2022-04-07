@@ -7,7 +7,7 @@ import os
 
 sys.path.insert(0, str(os.getcwd()) + '/IMDB')
 
-from reviews import get_critics_reviews, get_user_reviews
+from reviews import get_critics_reviews, get_user_reviews_bs
 
 def initiate_scrapping():
     print('start')
@@ -54,7 +54,8 @@ def initiate_scrapping():
         user_review_url = link + 'reviews?ref_=tt_ov_rt'
         critic_review_url = link + 'externalreviews?ref_=tt_ov_rt'
 
-        dictionary = {'link': link,
+        dictionary = {'name fr': name,
+                      'link': link,
                       'year': year.text.replace(')', ''),
                       'genre': ' '.join(list_genre),
                       'name': name.text,
@@ -62,10 +63,10 @@ def initiate_scrapping():
                       'metascore': metascore,
                       'user review url': user_review_url,
                       'critic review url': critic_review_url,
-                      'users reviews': get_user_reviews(link + 'reviews?sort=userRating&dir=asc&ratingFilter=0'),
+                      'users reviews': get_user_reviews_bs(link + 'reviews?sort=totalVotes&dir=desc&ratingFilter=0'),
                       'critics reviews': get_critics_reviews(critic_review_url)}
 
-        film_data = {'title': original_name, 'results': [dictionary]}
+        film_data = {'title': original_name, 'results': dictionary}
 
         print('{} {}'.format(film, original_name))
         film_rows.append(film_data)
@@ -76,5 +77,6 @@ def initiate_scrapping():
 def create_json(film_rows):
     with open('data.json', 'w') as outfile:
         json.dump(film_rows, outfile, indent=1)
+
 
 initiate_scrapping()

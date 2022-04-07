@@ -15,10 +15,12 @@ for i in range(0, len(data)):
     result_cr = []
     #for d in data[i]["results"][0]["critics reviews"]:
     for d in data[i]["results"]:
+        result_cr = []
         for usr in d["users reviews"]:
             usr['nlp'] = text_analyze(usr["content"], 'en')
             result_cr.append(usr)
         data[i]["results"][0]["users reviews"] = result_cr
+        result_cr = []
         for cr in d["critics reviews"]:
             if str(d.keys()) not in done:
                 done.add(str(cr.keys()))
