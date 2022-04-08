@@ -15,7 +15,7 @@ def initiate_scrapping():
 
     request = requests.get('https://www.imdb.com/chart/top/?ref_=nv_mv_250')
 
-    for film in range(0, 100):
+    for film in range(0, 1):
 
         time.sleep(0.8)
 
@@ -54,7 +54,7 @@ def initiate_scrapping():
         user_review_url = link + 'reviews?ref_=tt_ov_rt'
         critic_review_url = link + 'externalreviews?ref_=tt_ov_rt'
 
-        dictionary = {'name fr': name,
+        dictionary = {'name french': name.text,
                       'link': link,
                       'year': year.text.replace(')', ''),
                       'genre': ' '.join(list_genre),
@@ -66,7 +66,7 @@ def initiate_scrapping():
                       'users reviews': get_user_reviews_bs(link + 'reviews?sort=totalVotes&dir=desc&ratingFilter=0'),
                       'critics reviews': get_critics_reviews(critic_review_url)}
 
-        film_data = {'title': original_name, 'results': dictionary}
+        film_data = {'title': original_name, "results": [dictionary]}
 
         print('{} {}'.format(film, original_name))
         film_rows.append(film_data)

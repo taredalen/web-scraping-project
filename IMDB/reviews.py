@@ -10,17 +10,24 @@ import warnings
 warnings.filterwarnings("ignore")
 
 def get_critics_reviews(url):
-    
-    header = {'User-Agent': '"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36"'}
-    request = requests.get(url, headers=header)
+
+    request = requests.get(url)
     soup = BeautifulSoup(request.text, 'lxml')
     reviews = soup.find_all("a", {"class": "tracked-offsite-link"})
-    filter = ["Roger Ebert", "ReelViews", "Washington Post", "rogerebert.com", "New York Times"]
+    filters = ["Roger Ebert", "ReelViews", "Washington Post", "rogerebert.com", "New York Times"] #contient tout les critiques que je veux scrap
     review_list = []
+    for review in reviews:
+        if any(filter in review.text for filter in filters): 
+            time.sleep(0.8)
+            req = requests.get(review.get("href"))
+            paragraphe = BeautifulSoup(req.text, "lxml").find_all("p")
+            text_review = " ".join([text.text for text in paragraphe])
+            review_list.append({"title": review.text.strip(), "content": text_review})
+    """
     for review in reviews:
         for filt in filter:
             if filt in review.text:
-                time.sleep(2)
+                
                 req = requests.get(review.get("href"))
                 site = BeautifulSoup(req.text, "lxml")
                 para = site.find_all("p")
@@ -28,7 +35,7 @@ def get_critics_reviews(url):
                 for text in para:
                     text_review += text.text
                 review_list.append({review.text.strip(): text_review})
-
+    """
     return review_list
 
 def get_user_reviews_selenium(url):

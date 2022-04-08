@@ -73,5 +73,5 @@ links = get_all_film_from_json(data)
 
 list_movie_data = get_data_on_film(links)
 
-with open("data_sc.json", 'w') as f:
+with open("SensScrapFilmImdb/data_sc.json", 'w') as f:
     json.dump(list_movie_data, f, indent=1)
