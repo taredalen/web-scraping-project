@@ -7,7 +7,7 @@ import os
 
 sys.path.insert(0, str(os.getcwd()) + '/IMDB')
 
-from reviews import get_critics_reviews, get_user_reviews_bs
+from reviews import get_critics_reviews, get_user_reviews
 
 def initiate_scrapping():
     print('start')

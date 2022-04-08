@@ -1,11 +1,9 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.select import Select
-from bs4 import BeautifulSoup
-import requests
 import time
-
 import warnings
+
+import requests
+from bs4 import BeautifulSoup
+
 warnings.filterwarnings("ignore")
 
 def get_critics_reviews(url):
