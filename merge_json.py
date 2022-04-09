@@ -13,7 +13,6 @@ def merge_json(first_file, second_file):
         if first_value['title'] == second_value['title']:
             first_value['results'][0].update(second_value['results'][0])
 
-
     with open('final_data.json', 'w') as json_file:
         json.dump(first_json, json_file, indent=1)
         print('Successfully appended to the JSON file')
