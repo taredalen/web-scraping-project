@@ -14,7 +14,7 @@ def initiate_scrapping():
 
     request = requests.get('https://www.imdb.com/chart/top/?ref_=nv_mv_250')
 
-    for film in range(0, 1):
+    for film in range(0, 100):
 
         time.sleep(0.8)
 
