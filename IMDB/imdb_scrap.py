@@ -10,7 +10,6 @@ sys.path.insert(0, str(os.getcwd()) + '/IMDB')
 from reviews import get_critics_reviews, get_user_reviews
 
 def initiate_scrapping():
-    print('start')
     film_rows = []
 
     request = requests.get('https://www.imdb.com/chart/top/?ref_=nv_mv_250')
@@ -31,7 +30,7 @@ def initiate_scrapping():
         soup = BeautifulSoup(requests.get(link).text, 'lxml')
 
         name = soup.find('h1', {'data-testid': 'hero-title-block__title'})
-        year = soup.find('span', {'class': 'sc-52284603-2 iTRONr'})
+        year = soup.find('li', {'class': 'ipc-inline-list__item'}).find('span')
         rating = soup.find('span', {'class': 'sc-7ab21ed2-1 jGRxWM'})
         metascore = soup.find('span', {'class': 'score-meta'})
         original_name = soup.find('div', {'class': 'sc-dae4a1bc-0 gwBsXc'})
@@ -63,20 +62,18 @@ def initiate_scrapping():
                       'metascore': metascore,
                       'user review url': user_review_url,
                       'critic review url': critic_review_url,
-                      'users reviews': get_user_reviews_bs(link + 'reviews?sort=totalVotes&dir=desc&ratingFilter=0'),
+                      'users reviews': get_user_reviews(link + 'reviews?sort=totalVotes&dir=desc&ratingFilter=0'),
                       'critics reviews': get_critics_reviews(critic_review_url)}
 
-        film_data = {'title': original_name, "results": [dictionary]}
+        film_data = {'title': original_name, 'results': [dictionary]}
 
         print('{} {}'.format(film, original_name))
         film_rows.append(film_data)
 
     create_json(film_rows)
 
-
 def create_json(film_rows):
     with open('data.json', 'w') as outfile:
         json.dump(film_rows, outfile, indent=1)
-
 
 initiate_scrapping()

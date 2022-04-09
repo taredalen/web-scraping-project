@@ -1,5 +1,6 @@
+import os
+import sys
 import json
-import sys, os
 
 sys.path.insert(0, str(os.getcwd()) + '/TextAnalyzer')
 
