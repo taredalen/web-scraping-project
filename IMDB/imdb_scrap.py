@@ -7,9 +7,9 @@ import os
 
 sys.path.insert(0, str(os.getcwd()) + '/IMDB')
 
-from reviews import get_critics_reviews, get_user_reviews
+from imdb_reviews import get_critics_reviews, get_user_reviews
 
-def initiate_scrapping():
+def initiate_scrapping_imdb():
     film_rows = []
 
     request = requests.get('https://www.imdb.com/chart/top/?ref_=nv_mv_250')
@@ -66,7 +66,6 @@ def initiate_scrapping():
                       'critics reviews': get_critics_reviews(critic_review_url)}
 
         film_data = {'title': original_name, 'results': [dictionary]}
-
         print('{} {}'.format(film, original_name))
         film_rows.append(film_data)
 
@@ -75,6 +74,4 @@ def initiate_scrapping():
 def create_json(film_rows):
     with open('../Data/data_imdb.json', 'w') as outfile:
         json.dump(film_rows, outfile, indent=1)
-        print('Successfully appended to the JSON file')
-
-initiate_scrapping()
+        print('Successfully appended to the JSON file : data_imdb.json')

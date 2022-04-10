@@ -102,6 +102,7 @@ app.layout = html.Div([
     Input("submit-film", "n_clicks"),
     State("search-film", "value")
 )
+
 def update_page(n_clicks, value):
     if value is None or len(value) == 0:
         return get_menu_graph(df, df_decade)
@@ -109,7 +110,6 @@ def update_page(n_clicks, value):
         return html.Div(get_page_film(df_not_normalized, value))
     else:
         return html.H1("Pas Trouvé")
-
 
 if __name__ == '__main__':
     app.run_server(debug=True)
