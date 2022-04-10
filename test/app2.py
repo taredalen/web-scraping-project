@@ -33,27 +33,56 @@ app2.layout = html.Div(
                                   html.Div(
                                       className='div-for-dropdown',
                                       children=[
-                                          dcc.Dropdown(id='dataselector',
-                                                       options=['IMDB-SC-Scores', 'Popular genre per decade'],
-                                                       value='IMDB-SC-Scores',
-                                                       style={'backgroundColor': '#1E1E1E'},
-                                                       className='stockselector'
-                                                       )
+                                          dcc.Dropdown(
+                                              id='dataselector',
+                                              options=['IMDB-SC-Scores', 'Popular genre per decade'],
+                                              value='IMDB-SC-Scores',
+                                              style={'backgroundColor': '#1E1E1E'},
+                                              className='stockselector'
+                                          )
                                       ],
                                       style={'color': '#1E1E1E'}),
-                                  html.P('Or you can also see stats for each movie by selecting.'),
-
+                                  html.P('Or you can also see stats for each decade by selecting.'),
+                                  html.Div(
+                                      className="div-for-dropdown",
+                                      children=[
+                                          dcc.Dropdown(
+                                              id="decade-selector",
+                                              options=['1930s', '1940s', '1950s', '1960s', '1970s',
+                                                       '1980s', '1990s', '2000s', '2010s', '2020s'],
+                                              value='1930s',
+                                              placeholder="Select decade",
+                                          )
+                                      ],
+                                  ),
+                                  html.P('Or also see stats for each movie by search.'),
+                                  html.Div(
+                                      className="div-for-dropdown",
+                                      children=[
+                                          dcc.Dropdown(
+                                              id="movie-selector",
+                                              options=df2['title'],
+                                          )
+                                      ],
+                                  )
                               ]
                               ),
                      html.Div(className='eight columns div-for-charts bg-grey',
                               children=[
                                   dcc.Graph(id='timeseries',
                                             config={'displayModeBar': False},
+                                            animate=True),
+                                  dcc.Graph(id='timeseries_second',
+                                            config={'displayModeBar': False},
+                                            animate=True),
+                                  dcc.Graph(id='timeseries_third',
+                                            config={'displayModeBar': False},
                                             animate=True)
                               ])
                  ])
     ]
 )
+
 
 # Callback for timeseries price
 @app2.callback(Output('timeseries', 'figure'),
@@ -63,7 +92,7 @@ def update_timeseries(value):
     print(value)
     if value == 'IMDB-SC-Scores':
         figure = px.bar(
-            df2, x="title", y=['rating', 'metascore', 'rating sc'], barmode='group',
+            df2, x='title', y=['rating', 'metascore', 'rating sc'], barmode='group',
             color_discrete_map={'rating': 'RebeccaPurple', 'metascore': 'MediumPurple', 'rating sc': 'MediumOrchid'},
             template="simple_white")
         figure.update_xaxes(rangeslider_visible=True)
@@ -74,11 +103,9 @@ def update_timeseries(value):
             font=dict(color='white'),
             xaxis_title=None,
             yaxis_title=None,
-            width=900,
             height=800,
             bargap=0.30
         )
-
 
     if value == 'Popular genre per decade':
         figure = px.bar(get_genre_by_decades(df2), x='decade', y='genre count', color='genre', barmode='group',
@@ -88,16 +115,52 @@ def update_timeseries(value):
             plot_bgcolor='#323130',
             paper_bgcolor='#323130',
             font=dict(color='white'),
-            xaxis_title=None
+            xaxis_title=None,
+            height=400,
         )
-
         figure.update_xaxes(rangeslider_visible=False)
-
 
     figure.update_xaxes(
         # tickangle=30,
         tickfont=dict(size=10),
-        linewidth=2
+    )
+    return figure
+
+
+@app2.callback(Output('timeseries_second', 'figure'),
+               [Input('decade-selector', 'value')])
+def show_decade_genre(value):
+    figure = px.bar(get_movies_by_decade(df2, value),
+                    x='year', y='metascore', color='title', barmode='group',
+                    color_discrete_sequence=px.colors.qualitative.Vivid)
+    figure.update_xaxes(rangeslider_visible=False)
+    figure.update_layout(
+        legend=dict(title=None, orientation='v'),
+        plot_bgcolor='#323130',
+        paper_bgcolor='#323130',
+        font=dict(color='white'),
+        xaxis_title=None,
+        yaxis_title=None,
+        height=400
+    )
+    return figure
+
+
+@app2.callback(Output('timeseries_third', 'figure'),
+               [Input('decade-selector', 'value')])
+def show_decade_genre(value):
+    figure = px.bar(get_movies_by_decade(df2, value),
+                    x='year', y='metascore', color='title', barmode='group',
+                    color_discrete_sequence=px.colors.qualitative.Vivid)
+    figure.update_xaxes(rangeslider_visible=False)
+    figure.update_layout(
+        legend=dict(title=None, orientation='v'),
+        plot_bgcolor='#323130',
+        paper_bgcolor='#323130',
+        font=dict(color='white'),
+        xaxis_title=None,
+        yaxis_title=None,
+        height=400
     )
     return figure
 

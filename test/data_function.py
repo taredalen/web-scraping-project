@@ -35,8 +35,23 @@ def get_genre_by_decades(df_c):
 
     return df_dec
 
-def get_movies_by_decade(df):
+def get_movies_by_decade(df, decade):
+
+    df['year'] = df['year'].astype(int)
+    df['rating'] = pd.to_numeric(df['rating'])
+    df['metascore'] = pd.to_numeric(df['metascore']) / 10
     df['decade'] = (10 * (df['year'] // 10)).astype(str) + 's'
-    df = df.groupby(['decade'],sort=True)['decade'].count()
-    return df
+
+    df = df[['title', 'year', 'rating', 'metascore', 'genre', 'decade']]
+
+    index_decades = df[df['decade'] != decade].index
+
+    df.drop(index_decades, inplace=True)
+
+    s = df['genre'].str.split(' ').apply(Series, 1).stack()
+    s.index = s.index.droplevel(-1)
+    s.name = 'genre'
+    del df['genre']
+    df2 = df.join(s)
+    return df2
     
