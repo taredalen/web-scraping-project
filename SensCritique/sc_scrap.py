@@ -15,17 +15,8 @@ def initiate_scrapping_sc():
     liste_result = []
     film_rows = []
     driver.get("https://www.senscritique.com/films/tops/top111") #TODO : remplacer avec BS ou supprimer si deja fait de 17 à 26
-    """
     time.sleep(5)
     driver.find_element(By.CLASS_NAME, "fc-button-label").click()
-    time.sleep(5)
-    driver.find_element(By.CLASS_NAME, 'header-navigation-main-item').click()
-    time.sleep(5)
-    driver.find_element(By.LINK_TEXT, 'TOPS').click()
-    time.sleep(5)
-    driver.find_element(By.CLASS_NAME, 'epca-title').click()
-    time.sleep(5)
-    """
 
     #TODO: les pubs surprises à prévoir/anticiper
 
