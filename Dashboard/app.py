@@ -87,10 +87,11 @@ def wordcount(list_word):
 
 """
 
-app.layout = html.Div([
+app.layout = html.Div(id="main-div", children=[
     html.H1("Dashboard"),
     #html.Div(),
-    dcc.Input(id="search-film", type="text"),
+    dcc.Dropdown(["Menu", *df["title"]], id="search-film"),
+    #dcc.Input(id="search-film", type="text"),
     html.Button(id="submit-film", children="submit"),
     html.Div(id="main-page", children=get_menu_graph(df, df_decade))
 
@@ -104,7 +105,7 @@ app.layout = html.Div([
 )
 
 def update_page(n_clicks, value):
-    if value is None or len(value) == 0:
+    if value is None or value == "Menu":
         return get_menu_graph(df, df_decade)
     elif value in df['title'].values:
         return html.Div(get_page_film(df_not_normalized, value))
