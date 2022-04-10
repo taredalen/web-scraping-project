@@ -4,7 +4,7 @@ import warnings
 import requests
 from bs4 import BeautifulSoup
 
-warnings.filterwarnings("ignore")
+warnings.filterwarnings('ignore')
 
 def get_critics_reviews(url):
 
@@ -20,19 +20,6 @@ def get_critics_reviews(url):
             paragraphe = BeautifulSoup(req.text, "lxml").find_all("p")
             text_review = " ".join([text.text for text in paragraphe])
             review_list.append({"title": review.text.strip(), "content": text_review})
-    """
-    for review in reviews:
-        for filt in filter:
-            if filt in review.text:
-                
-                req = requests.get(review.get("href"))
-                site = BeautifulSoup(req.text, "lxml")
-                para = site.find_all("p")
-                text_review = ""
-                for text in para:
-                    text_review += text.text
-                review_list.append({review.text.strip(): text_review})
-    """
     return review_list
 
 def get_user_reviews(url):

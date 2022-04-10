@@ -2,11 +2,13 @@ import os
 import sys
 import json
 
+from TextAnalyzer.analyze import text_analyze
+
 sys.path.insert(0, str(os.getcwd()) + '/TextAnalyzer')
 
-from analyze import text_analyze
+from TextAnalyzer import analyze
 
-jFile = open("final_data.json")
+jFile = open('../Data/data_imdb_nlp.json')
 
 data = json.load(jFile)
 """
@@ -34,7 +36,7 @@ with open('IMDB/data3.json', 'w') as jF:
     json.dump(data, jF, indent=1)
 """
 
-for i in range(len(data)):
+for i in range(1):
     nlp_review_user_list = []
     nlp_review_critiques_list = []
     nlp_review_sc_list = []
@@ -57,5 +59,5 @@ for i in range(len(data)):
     print(i, data[i]["title"])
 
 
-with open('IMDB/final_data.json', 'w') as jF:
+with open('../Data/data_imdb_nlp.json', 'w') as jF:
     json.dump(data, jF, indent=1)

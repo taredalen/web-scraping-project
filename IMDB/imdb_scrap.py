@@ -14,7 +14,7 @@ def initiate_scrapping():
 
     request = requests.get('https://www.imdb.com/chart/top/?ref_=nv_mv_250')
 
-    for film in range(0, 100):
+    for film in range(0, 1):
 
         time.sleep(0.8)
 
@@ -73,7 +73,8 @@ def initiate_scrapping():
     create_json(film_rows)
 
 def create_json(film_rows):
-    with open('data.json', 'w') as outfile:
+    with open('../Data/data_imdb.json', 'w') as outfile:
         json.dump(film_rows, outfile, indent=1)
+        print('Successfully appended to the JSON file')
 
 initiate_scrapping()

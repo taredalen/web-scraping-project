@@ -3,7 +3,7 @@ import pandas as pd
 from pandas import Series
 
 def get_json_data():
-    with open('data3.json','r') as f:
+    with open('../Data/data3.json', 'r') as f:
         return json.loads(f.read())
 
 def normalize_data(data):
@@ -12,7 +12,7 @@ def normalize_data(data):
     df['year'] = df['year'].astype(int)
     df['rating'] = pd.to_numeric(df['rating'])
     df['metascore'] = pd.to_numeric(df['metascore'])/10
-    return df[['title','year', 'rating', 'metascore', 'genre']]
+    return df[['title', 'year', 'rating', 'metascore', 'genre']]
 
 def get_genre_by_decades(df_c):
     s = df_c['genre'].str.split(' ').apply(Series, 1).stack()

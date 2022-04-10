@@ -89,7 +89,7 @@ def initiate_scrapping():
 
 
 def create_json(film_data2):
-    with open('data_Senscritique.json', 'w') as outfile:
+    with open('../Data/data_sc.json', 'w') as outfile:
         json.dump(film_data2, outfile, indent=1)
 
 initiate_scrapping()

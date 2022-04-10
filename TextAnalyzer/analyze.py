@@ -7,7 +7,6 @@ from collections import Counter
 def punc_filter(doc):
     return [token for token in doc if not token.is_punct]
 
-
 def stopword_filter(doc):
     return [token for token in doc if not token.is_stop]
 
