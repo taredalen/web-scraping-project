@@ -3,7 +3,7 @@ import pandas as pd
 from pandas import Series
 
 def get_json_data():
-    with open('../Data/data3.json', 'r') as f:
+    with open('Data/data_imdb_nlp.json', 'r') as f:
         return json.loads(f.read())
 
 def normalize_data(data):
@@ -12,7 +12,8 @@ def normalize_data(data):
     df['year'] = df['year'].astype(int)
     df['rating'] = pd.to_numeric(df['rating'])
     df['metascore'] = pd.to_numeric(df['metascore'])/10
-    return df[['title', 'year', 'rating', 'metascore', 'genre']]
+    df["rating sc"] = pd.to_numeric(df["rating sc"])
+    return df[['title', 'year', 'rating', 'metascore', 'genre', 'rating sc']]
 
 def get_genre_by_decades(df_c):
     s = df_c['genre'].str.split(' ').apply(Series, 1).stack()
@@ -29,3 +30,9 @@ def get_genre_by_decades(df_c):
     df_dec = df_year.groupby(['decade', 'genre'], sort=True)['year'].count()
     df_dec = df_dec.to_frame(name = 'genre count').reset_index()
     return df_dec
+
+def get_movies_by_decade(df):
+    df['decade'] = (10 * (df['year'] // 10)).astype(str) + 's'
+    df = df.groupby(['decade'],sort=True)['decade'].count()
+    return df
+    
