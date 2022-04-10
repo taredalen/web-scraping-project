@@ -6,8 +6,6 @@ from TextAnalyzer.analyze import text_analyze
 
 sys.path.insert(0, str(os.getcwd()) + '/TextAnalyzer')
 
-from TextAnalyzer import analyze
-
 def clean_data():
     jFile = open('../Data/final_data.json')
 
@@ -35,7 +33,8 @@ def clean_data():
 
         print(i, data[i]["title"])
 
-
     with open('../Data/final_data.json', 'w') as jF:
         json.dump(data, jF, indent=1)
         print('Successfully appended to the JSON file : final_data.json')
+
+clean_data()

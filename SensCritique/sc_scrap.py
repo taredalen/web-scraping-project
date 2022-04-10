@@ -54,7 +54,10 @@ def initiate_scrapping_sc():
         except IndexError:
             genre = "Null"
         time.sleep(2)
+
         Score = driver.find_element(By.CLASS_NAME, 'pvi-scrating-value').text #TODO voir PEP 8 pour la declaration des var
+
+
         driver.find_element(By.LINK_TEXT, 'Critiques').click()
         current_link = driver.current_url
         review_link = get_review_link(current_link)
@@ -81,11 +84,12 @@ def initiate_scrapping_sc():
         film_data2.append(film_data)
         driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + Keys.HOME)
         Liste_result = []
-        Liste_commentaire_titre = []
+        Liste_commentaire_titre.clear()
         Liste_commentaire = []
         time.sleep(2)
         driver.close()
-    create_json(film_data2)
+    print(film_data2)
+    #create_json(film_data2)
 
 
 def create_json(film_data2):

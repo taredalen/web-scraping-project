@@ -6,7 +6,6 @@ import pandas as pd
 from bs4 import BeautifulSoup
 import requests
 
-
 def getCommentaire(Liste_titre, liste_comm, driver): #TODO: PEP 8
     titre2 = driver.find_element(By.CLASS_NAME, 'rvi-cover-title').text
     commentaire = driver.find_element(By.CLASS_NAME, 'rvi-review-content').text
@@ -14,7 +13,7 @@ def getCommentaire(Liste_titre, liste_comm, driver): #TODO: PEP 8
     liste_comm.append(commentaire)
 
 def merge_comms(liste_titre, liste_comm): #TODO : rename, comms for communications, communists??
-    Frame_commentaire = pd.DataFrame({"titre_comm":liste_titre,"commentaire":liste_comm})
+    Frame_commentaire = pd.DataFrame({"titre_comm":liste_titre, "commentaire":liste_comm})
     Frame_commentaire.to_csv('SensCritique.csv',sep = ";") #TODO: spaces!
     return Frame_commentaire
 
