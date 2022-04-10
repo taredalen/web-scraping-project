@@ -15,7 +15,7 @@ def initiate_scrapping():
 
     request = requests.get('https://www.imdb.com/chart/top/?ref_=nv_mv_250')
 
-    for film in range(0, 1):
+    for film in range(0, 100):
 
         time.sleep(0.8)
 
@@ -63,7 +63,7 @@ def initiate_scrapping():
                       'metascore': metascore,
                       'user review url': user_review_url,
                       'critic review url': critic_review_url,
-                      'users reviews': get_user_reviews_bs(link + 'reviews?sort=totalVotes&dir=desc&ratingFilter=0'),
+                      'users reviews': get_user_reviews(link + 'reviews?sort=totalVotes&dir=desc&ratingFilter=0'),
                       'critics reviews': get_critics_reviews(critic_review_url)}
 
         film_data = {'title': original_name, "results": [dictionary]}

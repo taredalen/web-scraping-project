@@ -5,10 +5,10 @@ sys.path.insert(0, str(os.getcwd()) + '/TextAnalyzer')
 
 from analyze import text_analyze
 
-jFile = open("IMDB/data.json")
+jFile = open("final_data.json")
 
 data = json.load(jFile)
-
+"""
 for i in range(0, len(data)):
     done = set()
     result_usr = []
@@ -30,4 +30,31 @@ for i in range(0, len(data)):
     print(i, data[i]["title"])
 
 with open('IMDB/data3.json', 'w') as jF:
+    json.dump(data, jF, indent=1)
+"""
+
+for i in range(len(data)):
+    nlp_review_user_list = []
+    nlp_review_critiques_list = []
+    nlp_review_sc_list = []
+
+    for film_review in data[i]["results"][0]["users reviews"]:
+        film_review["nlp"] = text_analyze(film_review["content"], 'en')
+        nlp_review_user_list.append(film_review)
+    data[i]["results"][0]["users reviews"] = nlp_review_user_list
+
+    for film_review in data[i]["results"][0]["critics reviews"]:
+        film_review["nlp"] = text_analyze(film_review["content"], 'en')
+        nlp_review_critiques_list.append(film_review)
+    data[i]["results"][0]["critics reviews"] = nlp_review_critiques_list
+
+    for film_review in data[i]["results"][0]["reviews sc"]:
+        film_review["nlp"] = text_analyze(film_review["content"], 'en')
+        nlp_review_sc_list.append(film_review)
+    data[i]["results"][0]["reviews sc"] = nlp_review_sc_list
+
+    print(i, data[i]["title"])
+
+
+with open('IMDB/final_data.json', 'w') as jF:
     json.dump(data, jF, indent=1)
