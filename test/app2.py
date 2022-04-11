@@ -1,5 +1,7 @@
+from click import style
 import dash
 import json
+from matplotlib.pyplot import plot
 import pandas as pd
 
 from dash.dependencies import Input, Output
@@ -7,30 +9,10 @@ from dash.dependencies import Input, Output
 from data_function import *
 from graph_function import *
 
-<<<<<<< HEAD
-# Load data
-
-df = pd.read_csv('test/data/stockdata2.csv', index_col=0, parse_dates=True)
-df.index = pd.to_datetime(df['Date'])
-
-# Initialize the app
 app2 = dash.Dash(__name__)
 app2.config.suppress_callback_exceptions = True
 
-
-import json
-import pandas as pd
-import seaborn as sns
-from pandas import Series
-import matplotlib.pyplot as plt
-
-with open('Data/final_data.json', 'r') as f:
-=======
-app2 = dash.Dash(__name__)
-app2.config.suppress_callback_exceptions = True
-
-with open('../Data/final_data.json', 'r') as f:
->>>>>>> e7efa18ea5b103e742c08a14e51a277b6a9e68cd
+with open('Data/final_data2.json', 'r') as f:
     data = json.loads(f.read())
 
 df_not_normalized = get_json_data()
@@ -93,7 +75,7 @@ app2.layout = html.Div(
                                           dcc.Graph(
                                               id='timeseries_third',
                                               config={'displayModeBar': False},
-                                              animate=True)
+                                              animate=False)
                                       ],
                                   )
                               ]
@@ -113,46 +95,6 @@ app2.layout = html.Div(
                )
 def update_timeseries(value):
     print(value)
-<<<<<<< HEAD
-    trace = []
-    df_sub = df
-    # STEP 2
-    # Draw and append traces for each stock
-    print(df2)
-    trace.append(go.Scatter(x=df2['name french'],
-                                 y=df2['year'],
-                                 mode='lines',
-                                 opacity=0.7,
-                                 
-                                 textposition='bottom center'))
-    """
-    for stock in df2['name french']:
-        trace.append(go.Scatter(x=stock.index,
-                                 y=df2['year'],
-                                 mode='lines',
-                                 opacity=0.7,
-                                 name=stock,
-                                 textposition='bottom center'))
-    """
-    # STEP 3
-    traces = [trace]
-    data = [val for sublist in traces for val in sublist]
-    # Define Figure
-    # STEP 4
-    figure = {'data': data,
-              'layout': go.Layout(
-                  colorway=["#5E0DAC", '#FF4F00', '#375CB1', '#FF7400', '#FFF400', '#FF0056'],
-                  template='plotly_dark',
-                  paper_bgcolor='rgba(0, 0, 0, 0)',
-                  plot_bgcolor='rgba(0, 0, 0, 0)',
-                  margin={'b': 15},
-                  hovermode='x',
-                  autosize=True,
-                  title={'text': 'Stock Prices', 'font': {'color': 'white'}, 'x': 0.5},
-                  xaxis={'range': [df2.index.min(), df2.index.max()]},
-              ),
-              }
-=======
     if value == 'IMDB-SC-Scores':
         figure = px.bar(
             df2, x='title', y=['rating', 'metascore', 'rating sc'], barmode='group',
@@ -171,7 +113,6 @@ def update_timeseries(value):
             bargap=0.30
         )
         return dcc.Graph(id='timeseries', figure=figure)
->>>>>>> e7efa18ea5b103e742c08a14e51a277b6a9e68cd
 
     if value == 'Popular genre per decade':
         figure = px.bar(get_genre_by_decades(df2), x='decade', y='genre count', color='genre', barmode='group',
@@ -221,7 +162,7 @@ def show_decade_genre(value):
 
 @app2.callback(Output('timeseries_third', 'figure'),
                [Input('movie-selector', 'value')])
-def show_movie_score(value):
+def show_movie_score(value): #line 71
     figure = px.bar(
         get_movie_score(value), x='title', y=['metascore', 'rating sc', 'rating'], barmode='group',
         color_discrete_map={'rating': 'RebeccaPurple', 'metascore': 'MediumPurple', 'rating sc': 'MediumOrchid'},

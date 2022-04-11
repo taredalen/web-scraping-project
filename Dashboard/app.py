@@ -12,7 +12,7 @@ import random
 from pandas.io.json import json_normalize
 from data_function import *
 from graph_function import *
-   
+
 # visit http://127.0.0.1:8050/ in your web browser.
 
 df_not_normalized = get_json_data()

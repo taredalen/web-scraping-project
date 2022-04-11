@@ -3,7 +3,7 @@ import pandas as pd
 from pandas import Series
 
 def get_json_data():
-    with open('Data/data_imdb_nlp.json', 'r') as f:
+    with open('Data/final_data2.json', 'r') as f:
         return json.loads(f.read())
 
 def normalize_data(data):
