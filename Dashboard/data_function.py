@@ -3,7 +3,7 @@ import pandas as pd
 from pandas import Series
 
 def get_json_data():
-    with open('../Data/final_data2.json', 'r') as f:
+    with open('../Data/final_data.json', 'r') as f:
         return json.loads(f.read())
 
 def normalize_data():
@@ -54,10 +54,8 @@ def get_movies_by_decade(decade):
 
 def get_movie_score(title):
     df = normalize_data()
-
     index_title = df[df['title'] != title].index
     df.drop(index_title, inplace=True)
-
     return df
 
 def get_movies_count_by_decade():

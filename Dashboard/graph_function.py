@@ -59,7 +59,6 @@ def get_wordcloud(reviews, title):
     )
     return dcc.Graph(figure=fig, style={'height': '100vh'})
 
-
 def wordcount(list_word):
     wordcount_list = []
 
