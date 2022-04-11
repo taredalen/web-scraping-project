@@ -2,13 +2,17 @@ import json
 import pandas as pd
 from pandas import Series
 
+with open('../Data/final_data.json', 'r') as f:
+    data = json.loads(f.read())
+
+df = pd.json_normalize(data, meta='title', record_path=['results'])
+
+
 def get_json_data():
-    with open('Data/data_imdb_nlp.json', 'r') as f:
+    with open('../Data/data_imdb_nlp.json', 'r') as f:
         return json.loads(f.read())
 
-def normalize_data(data):
-    df = pd.json_normalize(data, meta='title', record_path=['results'])
-
+def normalize_data():
     df['year'] = df['year'].astype(int)
     df['rating'] = pd.to_numeric(df['rating'])
     df['metascore'] = pd.to_numeric(df['metascore'])/10
@@ -54,4 +58,18 @@ def get_movies_by_decade(df, decade):
     del df['genre']
     df2 = df.join(s)
     return df2
+
+def get_movie_score(title):
+    df = pd.json_normalize(data, meta='title', record_path=['results'])
+
+    df['rating'] = pd.to_numeric(df['rating'])
+    df['rating sc'] = pd.to_numeric(df['rating sc'])
+    df['metascore'] = pd.to_numeric(df['metascore']) / 10
+
+    df = df[['title', 'rating', 'metascore', 'rating sc']]
+
+    index_title = df[df['title'] != title].index
+    df.drop(index_title, inplace=True)
+
+    return df
     

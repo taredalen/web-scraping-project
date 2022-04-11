@@ -13,6 +13,8 @@ app2.config.suppress_callback_exceptions = True
 with open('../Data/final_data.json', 'r') as f:
     data = json.loads(f.read())
 
+df_not_normalized = get_json_data()
+
 df2 = pd.json_normalize(data, meta='title', record_path=['results'])
 
 df2['year'] = df2['year'].astype(int)
@@ -28,14 +30,13 @@ app2.layout = html.Div(
                      html.Div(className='four columns div-user-controls',
                               children=[
                                   html.H2('DASH - MOVIES STATS'),
-                                  html.P('Visualising time series with Plotly - Dash.'),
                                   html.P('Pick one or more components from the dropdown below.'),
                                   html.Div(
                                       className='div-for-dropdown',
                                       children=[
                                           dcc.Dropdown(
                                               id='dataselector',
-                                              options=['IMDB-SC-Scores', 'Popular genre per decade'],
+                                              options=['IMDB-SC-Scores', 'Popular genre per decade', 'NLP'],
                                               value='IMDB-SC-Scores',
                                               style={'backgroundColor': '#1E1E1E'},
                                               className='stockselector'
@@ -62,33 +63,35 @@ app2.layout = html.Div(
                                           dcc.Dropdown(
                                               id="movie-selector",
                                               options=df2['title'],
+                                              value='The Godfather'
                                           )
+                                      ],
+                                  ),
+                                  html.Div(
+                                      className="div-for-dropdown",
+                                      children=[
+                                          dcc.Graph(
+                                              id='timeseries_third',
+                                              config={'displayModeBar': False},
+                                              animate=True)
                                       ],
                                   )
                               ]
                               ),
                      html.Div(className='eight columns div-for-charts bg-grey',
-                              children=[
-                                  dcc.Graph(id='timeseries',
-                                            config={'displayModeBar': False},
-                                            animate=True),
-                                  dcc.Graph(id='timeseries_second',
-                                            config={'displayModeBar': False},
-                                            animate=True),
-                                  dcc.Graph(id='timeseries_third',
-                                            config={'displayModeBar': False},
-                                            animate=True)
-                              ])
+                              id='main',
+                              children=[])
                  ])
     ]
 )
 
 
 # Callback for timeseries price
-@app2.callback(Output('timeseries', 'figure'),
-               [Input('dataselector', 'value')])
+@app2.callback(Output('main', 'children'),
+               [Input('dataselector', 'value')],
+               #[Input('movie-selector', 'movie')]
+               )
 def update_timeseries(value):
-    global figure
     print(value)
     if value == 'IMDB-SC-Scores':
         figure = px.bar(
@@ -96,6 +99,7 @@ def update_timeseries(value):
             color_discrete_map={'rating': 'RebeccaPurple', 'metascore': 'MediumPurple', 'rating sc': 'MediumOrchid'},
             template="simple_white")
         figure.update_xaxes(rangeslider_visible=True)
+        figure.update_xaxes(tickfont=dict(size=10))
         figure.update_layout(  # customize font and legend orientation & position
             legend=dict(title=None, orientation='h', y=1, yanchor='bottom', x=0.5, xanchor='center'),
             plot_bgcolor='#323130',
@@ -106,6 +110,7 @@ def update_timeseries(value):
             height=800,
             bargap=0.30
         )
+        return dcc.Graph(id='timeseries', figure=figure)
 
     if value == 'Popular genre per decade':
         figure = px.bar(get_genre_by_decades(df2), x='decade', y='genre count', color='genre', barmode='group',
@@ -118,13 +123,20 @@ def update_timeseries(value):
             xaxis_title=None,
             height=400,
         )
+        figure.update_xaxes(tickfont=dict(size=10))
         figure.update_xaxes(rangeslider_visible=False)
 
-    figure.update_xaxes(
-        # tickangle=30,
-        tickfont=dict(size=10),
-    )
-    return figure
+        return html.Div(children=[
+            dcc.Graph(id='timeseries',
+                      figure=figure),
+            dcc.Graph(id='timeseries_second',
+                      config={'displayModeBar': False},
+                      animate=True)
+        ])
+
+    #if value == 'NLP':  return html.Div(get_page_film(df_not_normalized, movie))
+
+
 
 
 @app2.callback(Output('timeseries_second', 'figure'),
@@ -147,12 +159,12 @@ def show_decade_genre(value):
 
 
 @app2.callback(Output('timeseries_third', 'figure'),
-               [Input('decade-selector', 'value')])
-def show_decade_genre(value):
-    figure = px.bar(get_movies_by_decade(df2, value),
-                    x='year', y='metascore', color='title', barmode='group',
-                    color_discrete_sequence=px.colors.qualitative.Vivid)
-    figure.update_xaxes(rangeslider_visible=False)
+               [Input('movie-selector', 'value')])
+def show_movie_score(value):
+    figure = px.bar(
+        get_movie_score(value), x='title', y=['metascore', 'rating sc', 'rating'], barmode='group',
+        color_discrete_map={'rating': 'RebeccaPurple', 'metascore': 'MediumPurple', 'rating sc': 'MediumOrchid'},
+        template="simple_white")
     figure.update_layout(
         legend=dict(title=None, orientation='v'),
         plot_bgcolor='#323130',
@@ -160,9 +172,11 @@ def show_decade_genre(value):
         font=dict(color='white'),
         xaxis_title=None,
         yaxis_title=None,
-        height=400
+        height=300,
+        bargap=0.30
     )
     return figure
+
 
 if __name__ == '__main__':
     app2.run_server(debug=True, threaded=True)

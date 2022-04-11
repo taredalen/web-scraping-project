@@ -457,6 +457,7 @@ a {
   flex-direction: column;
   height: 100vh;
   width: 100%;
+  overflow-y:scroll;
 }
 #histogram {
   flex-grow: 1
@@ -631,4 +632,18 @@ a {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #d8d8d870 !important;
+}
+
+
+.four columns div-user-controls {
+ position: fixed;
+}
+
+
+.fixed-content {
+    top: 0;
+    bottom:0;
+    position:fixed;
+    overflow-y:scroll;
+    overflow-x:hidden;
 }
