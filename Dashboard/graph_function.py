@@ -43,7 +43,7 @@ def get_ratings(film):
 
 def get_film_info(film):
     info = "Title: " + film["title"] + " Year: " + film["results"][0]["year"] + " Genre: " + film["results"][0]["genre"]
-    return html.Div(info )
+    return html.Div(info)
 
 """
 renvoie les 30 adjectifs les plus utilisé sous formes de wordcloud

@@ -1,15 +1,5 @@
-from distutils.log import debug
-from dash import Dash, html, dcc
 from dash.dependencies import Input, Output, State
-import plotly.express as px
-import pandas as pd
-import json
-from pandas import Series
-import plotly
-import plotly.graph_objs as go
-import random
 
-from pandas.io.json import json_normalize
 from data_function import *
 from graph_function import *
 
