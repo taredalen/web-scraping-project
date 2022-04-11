@@ -1,9 +1,7 @@
-from dash import Dash, html, dcc
-import plotly.express as px
+import random
 import plotly
 import plotly.graph_objs as go
-import random
-
+from dash import html, dcc
 
 def get_page_film(list_film, film_name):
     film = next((dictionary for dictionary in list_film if dictionary["title"] == film_name), None)
