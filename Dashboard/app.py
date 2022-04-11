@@ -26,8 +26,10 @@ app.layout = html.Div(
                                       children=[
                                           dcc.Dropdown(
                                               id='dataselector',
-                                              options=['IMDB-SC-Scores', 'Popular genre per decade', 'NLP'],
-                                              value='NLP',
+                                              options=['IMDB-SC-Scores',
+                                                       'Popular genre per decade',
+                                                       'NLP', 'Countries repartition'],
+                                              value='Countries repartition',
                                               style={'backgroundColor': '#1E1E1E'},
                                               className='stockselector'
                                           )
@@ -128,6 +130,26 @@ def show_all_movies_scores(value, value2, movie):
     if value == 'NLP':
         return html.Div(get_page_film(get_json_data(), movie))
 
+    if value == 'Countries repartition':
+        print(get_countries())
+        figure = px.pie(get_countries(), values='country count', names='country')
+        figure.update_layout(  # customize font and legend orientation & position
+            legend=dict(title=None, orientation='v'),
+            plot_bgcolor='#323130',
+            paper_bgcolor='#323130',
+            font=dict(color='white'),
+            xaxis_title=None,
+            height=780
+        )
+        figure.update_xaxes(tickfont=dict(size=10))
+        figure.update_xaxes(rangeslider_visible=False)
+
+        return dcc.Graph(
+            id='timeseries',
+            figure=figure
+        )
+
+
 
 @app.callback(Output('timeseries_second', 'figure'),
                Input('decade-selector', 'value'))
@@ -171,4 +193,5 @@ def show_movie_score(value):
 
 
 if __name__ == '__main__':
+
     app.run_server(debug=True, threaded=True)

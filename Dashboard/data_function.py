@@ -15,7 +15,7 @@ def normalize_data():
     df['metascore'] = pd.to_numeric(df['metascore'])/10
     df['rating sc'] = pd.to_numeric(df['rating sc'])
     df['decade'] = (10 * (df['year'] // 10)).astype(str) + 's'
-    return df[['title', 'year', 'rating', 'metascore', 'genre', 'rating sc', 'decade']]
+    return df[['title', 'year', 'rating', 'metascore', 'genre', 'rating sc', 'decade', 'country']]
 
 def get_genre_by_decades():
 
@@ -63,4 +63,16 @@ def get_movie_score(title):
 def get_movies_count_by_decade():
     df = normalize_data()
     df = df.groupby(['decade'], sort=True)['decade'].count()
+    return df
+
+def get_countries():
+    df = normalize_data()
+    s = df['country'].str.split(', ').apply(Series, 1).stack()
+    s.index = s.index.droplevel(-1)
+    s.name = 'country'
+    del df['country']
+    df2 = df.join(s)
+
+    df = df2.groupby(['country'], sort=True)['country'].count()
+    df = df.to_frame(name='country count').reset_index()
     return df
