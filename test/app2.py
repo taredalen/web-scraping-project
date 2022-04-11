@@ -9,7 +9,7 @@ from graph_function import *
 
 # Load data
 
-df = pd.read_csv('data/stockdata2.csv', index_col=0, parse_dates=True)
+df = pd.read_csv('test/data/stockdata2.csv', index_col=0, parse_dates=True)
 df.index = pd.to_datetime(df['Date'])
 
 # Initialize the app
@@ -23,7 +23,7 @@ import seaborn as sns
 from pandas import Series
 import matplotlib.pyplot as plt
 
-with open('../Data/final_data.json', 'r') as f:
+with open('Data/final_data.json', 'r') as f:
     data = json.loads(f.read())
 
 df2 = pd.json_normalize(data, meta='title', record_path=['results'])
@@ -102,6 +102,14 @@ def update_timeseries(value):
     df_sub = df
     # STEP 2
     # Draw and append traces for each stock
+    print(df2)
+    trace.append(go.Scatter(x=df2['name french'],
+                                 y=df2['year'],
+                                 mode='lines',
+                                 opacity=0.7,
+                                 
+                                 textposition='bottom center'))
+    """
     for stock in df2['name french']:
         trace.append(go.Scatter(x=stock.index,
                                  y=df2['year'],
@@ -109,6 +117,7 @@ def update_timeseries(value):
                                  opacity=0.7,
                                  name=stock,
                                  textposition='bottom center'))
+    """
     # STEP 3
     traces = [trace]
     data = [val for sublist in traces for val in sublist]
