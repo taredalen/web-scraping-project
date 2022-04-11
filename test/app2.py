@@ -1,8 +1,6 @@
 import dash
-import json
-import pandas as pd
-
-from dash.dependencies import Input, Output
+import plotly.express as px
+from dash.dependencies import Input, Output, State
 
 from data_function import *
 from graph_function import *
@@ -29,7 +27,7 @@ app2.layout = html.Div(
                                           dcc.Dropdown(
                                               id='dataselector',
                                               options=['IMDB-SC-Scores', 'Popular genre per decade', 'NLP'],
-                                              value='IMDB-SC-Scores',
+                                              value='NLP',
                                               style={'backgroundColor': '#1E1E1E'},
                                               className='stockselector'
                                           )
@@ -80,11 +78,10 @@ app2.layout = html.Div(
 
 # Callback for timeseries price
 @app2.callback(Output('main', 'children'),
-               [Input('dataselector', 'value')],
-               #[Input('movie-selector', 'movie')]
-               )
-def show_all_movies_scores(value):
-    print(value)
+               Input('dataselector', 'value'),
+               Input('movie-selector', 'value'),
+               State('movie-selector', 'value'))
+def show_all_movies_scores(value, value2, movie):
     if value == 'IMDB-SC-Scores':
         figure = px.bar(
             df, x='title', y=['rating', 'metascore', 'rating sc'], barmode='group',
@@ -102,7 +99,10 @@ def show_all_movies_scores(value):
             height=800,
             bargap=0.30
         )
-        return dcc.Graph(id='timeseries', figure=figure)
+        return dcc.Graph(
+            id='timeseries',
+            figure=figure
+        )
 
     if value == 'Popular genre per decade':
         figure = px.bar(get_genre_by_decades(), x='decade', y='genre count', color='genre', barmode='group',
@@ -113,7 +113,7 @@ def show_all_movies_scores(value):
             paper_bgcolor='#323130',
             font=dict(color='white'),
             xaxis_title=None,
-            height=400,
+            height=400
         )
         figure.update_xaxes(tickfont=dict(size=10))
         figure.update_xaxes(rangeslider_visible=False)
@@ -122,20 +122,18 @@ def show_all_movies_scores(value):
             dcc.Graph(id='timeseries',
                       figure=figure),
             dcc.Graph(id='timeseries_second',
-                      config={'displayModeBar': False},
-                      animate=True)
+                      config={'displayModeBar': False})
         ])
 
-    #if value == 'NLP':  return html.Div(get_page_film(df_not_normalized, movie))
+    if value == 'NLP':
+        return html.Div(get_page_film(get_json_data(), movie))
 
 
 @app2.callback(Output('timeseries_second', 'figure'),
-               [Input('decade-selector', 'value')])
+               Input('decade-selector', 'value'))
 def show_decade_genre(value):
-    figure = px.bar(get_movies_by_decade(value),
-                    x='year', y='metascore', color='title', barmode='group',
+    figure = px.bar(get_movies_by_decade(value), x='year', y='rating', color='title', barmode='group',
                     color_discrete_sequence=px.colors.qualitative.Vivid)
-    figure.update_xaxes(rangeslider_visible=False)
     figure.update_layout(
         legend=dict(title=None, orientation='v'),
         plot_bgcolor='#323130',
@@ -143,13 +141,16 @@ def show_decade_genre(value):
         font=dict(color='white'),
         xaxis_title=None,
         yaxis_title=None,
-        height=400
+        height=400,
+        yaxis_range=[0, 10],
+        bargap=0.30
     )
+    figure.update_xaxes(rangeslider_visible=False)
     return figure
 
 
 @app2.callback(Output('timeseries_third', 'figure'),
-               [Input('movie-selector', 'value')])
+               Input('movie-selector', 'value'))
 def show_movie_score(value):
     figure = px.bar(
         get_movie_score(value), x='title', y=['metascore', 'rating sc', 'rating'], barmode='group',
@@ -165,8 +166,10 @@ def show_movie_score(value):
         height=300,
         bargap=0.30
     )
+    figure.update_xaxes(visible=False),
     return figure
 
 
 if __name__ == '__main__':
+
     app2.run_server(debug=True, threaded=True)

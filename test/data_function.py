@@ -2,10 +2,12 @@ import json
 import pandas as pd
 from pandas import Series
 
-def normalize_data():
+def get_json_data():
     with open('../Data/final_data2.json', 'r') as f:
-        data = json.loads(f.read())
+        return json.loads(f.read())
 
+def normalize_data():
+    data = get_json_data()
     df = pd.json_normalize(data, meta='title', record_path=['results'])
 
     df['year'] = df['year'].astype(int)
@@ -62,3 +64,21 @@ def get_movies_count_by_decade():
     df = normalize_data()
     df = df.groupby(['decade'], sort=True)['decade'].count()
     return df
+
+
+
+def wordcount(list_word):
+    wordcount_list = []
+
+    current_word = None
+    current_count = 0
+
+    for word, count in list_word:
+        if current_word == word:
+            current_count += count
+        else:
+            if current_word is not None:
+                wordcount_list.append((current_word, current_count))
+            current_word = word
+            current_count = count
+    return wordcount_list
