@@ -1,15 +1,7 @@
 from click import style
 import dash
-<<<<<<< HEAD
-import json
-from matplotlib.pyplot import plot
-import pandas as pd
-
-from dash.dependencies import Input, Output
-=======
 import plotly.express as px
 from dash.dependencies import Input, Output, State
->>>>>>> 3ae29cb2a02a834bb040078e42378c573d566a7c
 
 from data_function import *
 from graph_function import *
@@ -17,11 +9,7 @@ from graph_function import *
 app2 = dash.Dash(__name__)
 app2.config.suppress_callback_exceptions = True
 
-<<<<<<< HEAD
-with open('Data/final_data2.json', 'r') as f:
-=======
 with open('../Data/final_data.json', 'r') as f:
->>>>>>> 3ae29cb2a02a834bb040078e42378c573d566a7c
     data = json.loads(f.read())
 
 df = normalize_data()
@@ -91,18 +79,10 @@ app2.layout = html.Div(
 
 # Callback for timeseries price
 @app2.callback(Output('main', 'children'),
-<<<<<<< HEAD
-               [Input('dataselector', 'value')],
-               #[Input('movie-selector', 'movie')]
-               )
-def update_timeseries(value):
-    print(value)
-=======
                Input('dataselector', 'value'),
                Input('movie-selector', 'value'),
                State('movie-selector', 'value'))
 def show_all_movies_scores(value, value2, movie):
->>>>>>> 3ae29cb2a02a834bb040078e42378c573d566a7c
     if value == 'IMDB-SC-Scores':
         figure = px.bar(
             df, x='title', y=['rating', 'metascore', 'rating sc'], barmode='group',
@@ -120,14 +100,10 @@ def show_all_movies_scores(value, value2, movie):
             height=800,
             bargap=0.30
         )
-<<<<<<< HEAD
-        return dcc.Graph(id='timeseries', figure=figure)
-=======
         return dcc.Graph(
             id='timeseries',
             figure=figure
         )
->>>>>>> 3ae29cb2a02a834bb040078e42378c573d566a7c
 
     if value == 'Popular genre per decade':
         figure = px.bar(get_genre_by_decades(), x='decade', y='genre count', color='genre', barmode='group',
@@ -175,13 +151,8 @@ def show_decade_genre(value):
 
 
 @app2.callback(Output('timeseries_third', 'figure'),
-<<<<<<< HEAD
-               [Input('movie-selector', 'value')])
-def show_movie_score(value): #line 71
-=======
                Input('movie-selector', 'value'))
 def show_movie_score(value):
->>>>>>> 3ae29cb2a02a834bb040078e42378c573d566a7c
     figure = px.bar(
         get_movie_score(value), x='title', y=['metascore', 'rating sc', 'rating'], barmode='group',
         color_discrete_map={'rating': 'RebeccaPurple', 'metascore': 'MediumPurple', 'rating sc': 'MediumOrchid'},

@@ -2,19 +2,8 @@ import json
 import pandas as pd
 from pandas import Series
 
-<<<<<<< HEAD
-with open('Data/final_data2.json', 'r') as f:
-    data = json.loads(f.read())
-
-df = pd.json_normalize(data, meta='title', record_path=['results'])
-
-
-def get_json_data():
-    with open('Data/data_imdb_nlp.json', 'r') as f:
-=======
 def get_json_data():
     with open('../Data/final_data2.json', 'r') as f:
->>>>>>> 3ae29cb2a02a834bb040078e42378c573d566a7c
         return json.loads(f.read())
 
 def normalize_data():
