@@ -51,7 +51,7 @@ def get_reviews(url):
         req = requests.get("https://www.senscritique.com" + link)
         soup = BeautifulSoup(req.text, "lxml")
         title = soup.find("h1", {"class": "rvi-cover-title"}).text
-        content = ' '.join(map(lambda x:x.text, soup.find("div", {"class": "rvi-review-content"}).find_all("p")))
+        content = ' '.join(map(lambda x: x.text, soup.find("div", {"class": "rvi-review-content"}).find_all("p")))
 
         reviews_list.append({"title": title, "content": content})
 
@@ -65,7 +65,7 @@ def get_score(url):
     return soup.find("span", {"itemprop": "ratingValue"}).text
 
 
-f = open("Data/data_imdb.json")
+f = open("../Data/data_imdb.json")
 data = json.load(f)
 
 links = get_all_film_from_json(data)

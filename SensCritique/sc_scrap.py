@@ -9,22 +9,19 @@ def initiate_scrapping_sc():
     driver = webdriver.Firefox()
 
     liste_film = []
-    liste_film_text = []#TODO : verifier et supprimer des variables non utilisées
+    liste_film_text = []
     liste_commentaire = []
     liste_commentaire_titre = []
     liste_result = []
     film_rows = []
-    driver.get("https://www.senscritique.com/films/tops/top111") #TODO : remplacer avec BS ou supprimer si deja fait de 17 à 26
-    time.sleep(5)
+    driver.get("https://www.senscritique.com/films/tops/top111")
+    time.sleep(2)
     driver.find_element(By.CLASS_NAME, "fc-button-label").click()
-
-    #TODO: les pubs surprises à prévoir/anticiper
 
     liste_film.append(driver.find_elements(By.CLASS_NAME, 'elco-title'))
     for element in range(100):
         liste_film_text.append(liste_film[0][element].text)
-    
-    
+
     for film in range(len(liste_film_text)):
         liste_film_text[film] = liste_film_text[film].replace("(", " ")
         liste_film_text[film] = liste_film_text[film].replace(")", "")

@@ -1,16 +1,12 @@
 import time
-from selenium import webdriver
-
-from selenium.webdriver.common.by import By
-import pandas as pd
-from bs4 import BeautifulSoup
 import requests
+from bs4 import BeautifulSoup
+from selenium.webdriver.common.by import By
 
-
-def getcommentaire(Liste_titre, liste_comm, driver): #TODO: PEP 8
-    titre2 = driver.find_element(By.CLASS_NAME, 'rvi-cover-title').text
+def getcommentaire(liste_titre, liste_comm, driver):
+    titre = driver.find_element(By.CLASS_NAME, 'rvi-cover-title').text
     commentaire = driver.find_element(By.CLASS_NAME, 'rvi-review-content').text
-    Liste_titre.append(titre2)
+    liste_titre.append(titre)
     liste_comm.append(commentaire)
 
 def get_review_link(url):
