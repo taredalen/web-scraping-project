@@ -1,4 +1,5 @@
 import dash
+from matplotlib.pyplot import title
 import plotly.express as px
 from dash.dependencies import Input, Output, State
 
@@ -8,7 +9,7 @@ from graph_function import *
 app = dash.Dash(__name__)
 app.config.suppress_callback_exceptions = True
 
-with open('../Data/final_data.json', 'r') as f:
+with open('Data/final_data.json', 'r') as f:
     data = json.loads(f.read())
 
 df = normalize_data()
@@ -134,6 +135,13 @@ def show_all_movies_scores(value, value2, movie):
         print(get_countries())
         figure = px.pie(get_countries(), values='country count', names='country')
         figure.update_layout(  # customize font and legend orientation & position
+            title={
+                'text': 'COUNTRY REPARTITION FOR IMDB',
+                'y': 0.95,
+                'x': 0.5,
+                'xanchor': 'center',
+                'yanchor': 'top'
+            },
             legend=dict(title=None, orientation='v'),
             plot_bgcolor='#323130',
             paper_bgcolor='#323130',
@@ -144,10 +152,33 @@ def show_all_movies_scores(value, value2, movie):
         figure.update_xaxes(tickfont=dict(size=10))
         figure.update_xaxes(rangeslider_visible=False)
 
-        return dcc.Graph(
+        figure2 = px.pie(normalize_data_sc_country(get_data_sc()), values='country count', names='country')
+        figure2.update_layout(  # customize font and legend orientation & position
+            title={
+                'text': 'COUNTRY REPARTITION FOR SENSCRITIQUE',
+                'y': 0.95,
+                'x': 0.5,
+                'xanchor': 'center',
+                'yanchor': 'top'
+            },
+            legend=dict(title=None, orientation='v'),
+            plot_bgcolor='#323130',
+            paper_bgcolor='#323130',
+            font=dict(color='white'),
+            xaxis_title=None,
+            height=780
+        )
+        figure2.update_xaxes(tickfont=dict(size=10))
+        figure2.update_xaxes(rangeslider_visible=False)
+
+
+        return [dcc.Graph(
             id='timeseries',
             figure=figure
-        )
+        ), dcc.Graph(
+            id='timeseries-2',
+            figure=figure2
+        )]
 
 
 
