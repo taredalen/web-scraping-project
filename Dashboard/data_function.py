@@ -1,9 +1,9 @@
 import json
 import pandas as pd
-from pandas import Series
+from pandas import DataFrame, Series
 
 def get_json_data():
-    with open('../Data/final_data.json', 'r') as f:
+    with open('Data/final_data.json', 'r') as f:
         return json.loads(f.read())
 
 def normalize_data():
@@ -74,3 +74,23 @@ def get_countries():
     df = df2.groupby(['country'], sort=True)['country'].count()
     df = df.to_frame(name='country count').reset_index()
     return df
+
+def get_data_sc():
+    with open('Data/test_sc.json', 'r') as f:
+        return json.loads(f.read())
+
+def normalize_data_sc_country(data):
+    df = DataFrame([element['country'] for element in data], index=[element['titre_du_film'] for element in data], columns=['country'])
+    s = df['country'].str.split(', ').apply(Series, 1).stack()
+    s.index = s.index.droplevel(-1)
+    s.name = 'country'
+    del df['country']
+    df2 = df.join(s)
+
+    df = df2.groupby(['country'], sort=True)['country'].count()
+    df = df.to_frame(name='country count').reset_index()
+    return df
+
+
+
+print(normalize_data_sc_country(get_data_sc()))
