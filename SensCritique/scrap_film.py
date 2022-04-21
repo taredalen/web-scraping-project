@@ -30,7 +30,7 @@ def get_data_on_film(list_link):
         score = get_score(url)
         dictionary = {"rating sc": score, "reviews sc": reviews, "link sc": url}
         list_movies.append({"title": title, "results": [dictionary]})
-    
+        
     return list_movies
 
 
